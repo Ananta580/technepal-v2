@@ -2,7 +2,7 @@
   <!-- Main Section -->
   <div class="flex w-[70%] my-6 flex-col gap-6">
     <!-- Ads Section -->
-    <div class="bg-slate-50 py-5 flex w-full justify-center text-gray-400">
+    <div class="bg-slate-50 py-16 flex w-full justify-center text-gray-400">
       Ads
     </div>
     <!-- Navigate Trending Section -->
@@ -13,34 +13,56 @@
         HOT TOPICS
       </div>
       <!-- Scroll bar with style -->
-      <div class="flex items-center w-full h-full overflow-x-scroll scrollbar">
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
-        <button class="px-3">Ananta</button>
+      <div class="flex items-center w-full h-full overflow-x-auto scrollbar">
+        <button class="px-3 py-1 flex-none hover:text-blue-500">
+          Chat GPT
+        </button>
+        <button class="px-3 py-1 flex-none hover:text-blue-500">
+          iPhone 15
+        </button>
+        <button class="px-3 py-1 flex-none hover:text-blue-500">Bard AI</button>
+        <button class="px-3 py-1 flex-none hover:text-blue-500">
+          Angular 16
+        </button>
+        <button class="px-3 py-1 flex-none hover:text-blue-500">
+          Google I|O 2023
+        </button>
+        <button class="px-3 py-1 flex-none hover:text-blue-500">.NET 8</button>
+        <button class="px-3 py-1 flex-none hover:text-blue-500">
+          Share Market
+        </button>
+        <button class="px-3 py-1 flex-none hover:text-blue-500">
+          New Laptops
+        </button>
+        <button class="px-3 py-1 flex-none hover:text-blue-500">
+          New Mobiles
+        </button>
+        <button class="px-3 py-1 flex-none hover:text-blue-500">
+          React JS 1.9
+        </button>
+        <button class="px-3 py-1 flex-none hover:text-blue-500">
+          Font Awesome 9.0
+        </button>
       </div>
     </div>
     <!-- Display Section -->
-    <div>
-      <!-- Phone Section Section -->
+    <div class="flex flex-col mt-16 gap-6">
+      <!-- HOT Topic & Latest News  -->
+      <div class="flex gap-6">
+        <app-hot-topic class="w-4/6"></app-hot-topic>
+        <app-latest-news class="w-2/6"></app-latest-news>
+      </div>
+      <!-- Phone Section -->
+      <app-flat-display-section sectionName="Phones"></app-flat-display-section>
       <!-- Laptop Section -->
+      <app-flat-display-section
+        sectionName="Laptops & Computing"
+      ></app-flat-display-section>
+
       <!-- Gaming Section -->
+      <app-flat-display-section
+        sectionName="Gamings"
+      ></app-flat-display-section>
     </div>
   </div>
 </div>
