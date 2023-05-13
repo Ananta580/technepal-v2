@@ -4,18 +4,25 @@ import { Component } from '@angular/core';
   selector: 'app-main',
   styles: [
     `
-      .top-category {
-        overflow-x: scroll;
-        overflow-y: hidden;
+      /* width */
+      .scrollbar::-webkit-scrollbar {
+        width: 10px;
+        height: 5px;
       }
 
-      .top-category::-webkit-scrollbar {
-        display: none;
+      /* Track */
+      .scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
       }
 
-      .top-category {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+      /* Handle */
+      .scrollbar::-webkit-scrollbar-thumb {
+        background: #7d8ca3;
+      }
+
+      /* Handle on hover */
+      .scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #555;
       }
     `,
   ],
