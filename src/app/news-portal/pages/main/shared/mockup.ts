@@ -17,8 +17,7 @@ export const HotNews: News[] = [
   },
   {
     id: 3,
-    title:
-      'WhatsApp spying on Android users at night? Google says it is just a bug',
+    title: 'WhatsApp spying on Android users at night?',
     subTitle:
       'A Google Pixel user, who is an engineer at Twitter, reported his microphone being accessed by WhatsApp at night.',
     coverImage: 'assets/whatsapp.webp',
@@ -27,14 +26,14 @@ export const HotNews: News[] = [
     id: 4,
     title: 'Nuclear Energy Is Surprisingly “Green” And Safe',
     subTitle:
-      'According to Reuters, the US Nuclear Regulatory Commission (NRC) approved temporary nuclear waste storage in New Mexico. ',
+      'According to Reuters, the US Nuclear Regulatory Commission (NRC) approved temporary nuclear waste storage. ',
     coverImage: 'assets/nuclear.jpg',
   },
   {
     id: 5,
     title: 'Do People Really Want AI In Social Media?',
     subTitle:
-      'In May 2023, it’s impossible to escape the sweeping implementation of artificial intelligence features across consumer technology.',
+      'In May 2023, it’s impossible to escape the sweeping implementation of artificial intelligence, consumer technology.',
     coverImage: 'assets/socialmedia.jpg',
   },
 ];
@@ -42,15 +41,14 @@ export const HotNews: News[] = [
 export const LatestNews: News[] = [
   {
     id: 1,
-    title:
-      'Canon launches Powershot V10, its first camera designed specifically for vlogging',
+    title: 'Canon launches Powershot V10.',
     subTitle:
       'Canon has introduced a pocket-sized, dedicated vlogging camera, the Canon PowerShot V10.',
     coverImage: 'assets/canon.jpg',
   },
   {
     id: 2,
-    title: 'WhatsApp now accessible on smartwatches through Wear OS',
+    title: 'WhatsApp now accessible on smartwatches.',
     subTitle: 'The open-sourced innovation got a Google I/O 2023 launch',
     coverImage: 'assets/whataspplates.webp',
   },
@@ -62,8 +60,7 @@ export const LatestNews: News[] = [
   },
   {
     id: 4,
-    title:
-      'Samsung Galaxy M14 5G: An impressive all-rounder in the budget smartphone segment    ',
+    title: 'Samsung Galaxy M14 5G: An impressive all-rounder.',
     subTitle: 'The open-sourced innovation got a Google I/O 2023 launch',
     coverImage: 'assets/samsungm4.jpg',
   },
@@ -81,42 +78,37 @@ export const LatestNews: News[] = [
   },
   {
     id: 7,
-    title:
-      'Samsung Galaxy S23+: The perfect all-rounder that balances the best of both worlds',
+    title: 'Samsung Galaxy S23+: The perfect all-rounder that balances',
     subTitle: 'The open-sourced innovation got a Google I/O 2023 launch',
     coverImage: 'assets/samsungs23.webp',
   },
   {
     id: 8,
-    title:
-      'The iPad Killer? OnePlus’s upcoming tablet, OnePlus Pad’s Indian price revealed accidentally',
+    title: 'The iPad Killer? OnePlus’s upcoming tablet',
     subTitle: 'The open-sourced innovation got a Google I/O 2023 launch',
     coverImage: 'assets/ipadkiller.jpg',
   },
   {
     id: 9,
-    title:
-      'Gigabyte launches new gaming laptops with 13th Gen Intel CPUs and Nvidia RTX 40-series GPUs',
+    title: 'Gigabyte launches new gaming laptops with 13th Gen',
     subTitle: 'The open-sourced innovation got a Google I/O 2023 launch',
     coverImage: 'assets/rtx40.jpg',
   },
   {
     id: 10,
-    title:
-      'OnePlus Nord Buds 2 Review: Nord Buds with ANC and better value for money',
+    title: 'OnePlus Nord Buds 2 Review: Nord Buds with ANC',
     subTitle: 'The open-sourced innovation got a Google I/O 2023 launch',
     coverImage: 'assets/oneplusbud.jpg',
   },
   {
     id: 11,
-    title:
-      'Tecno launches Phantom V Fold - the most ‘affordable’ folding phone in India to date',
+    title: 'Tecno launches Phantom V Fold - the most ‘affordable’ ',
     subTitle: 'The open-sourced innovation got a Google I/O 2023 launch',
     coverImage: 'assets/techno.jpg',
   },
   {
     id: 12,
-    title: 'Next entry-level budget iPad will be powered by an A14 chip',
+    title: 'Next entry-level budget iPad will be powered by A14 chip',
     subTitle: 'The open-sourced innovation got a Google I/O 2023 launch',
     coverImage: 'assets/applea14.webp',
   },
@@ -125,10 +117,9 @@ export const LatestNews: News[] = [
 export const PhoneNews: News[] = [
   {
     id: 1,
-    title:
-      'HTC U23 Pro Compatible With Viverse VR Confirmed to Launch on May 18: All Details',
+    title: 'HTC U23 Pro Compatible With Viverse VR to be Launch on May 18',
     subTitle:
-      'HTC U23 Pro is confirmed to launch globally next week. The Taiwanese smartphone maker recently launched the HTC Wildfire E2 Play, now available in select African markets.',
+      'HTC U23 Pro is confirmed to launch globally next week. The Taiwanese smartphone maker recently launched the HTC Wildfire E2 Play.',
     coverImage: 'assets/htc.jpg',
   },
   {
@@ -141,7 +132,7 @@ export const PhoneNews: News[] = [
   {
     id: 3,
     title:
-      'Vivo S17 Pro Reportedly Spotted on 3C Website; Camera Specifications Tipped',
+      'Vivo S17 Pro Reportedly Spotted on Website Camera Specifications Tipped',
     subTitle:
       'Vivo S17 Pro is reportedly in the works. The Vivo S17 series is expected to succeed the Vivo 16 series — which included the Vivo S16, Vivo S16e and Vivo S16 Pro',
     coverImage: 'assets/vivo.webp',
@@ -157,14 +148,15 @@ export const PhoneNews: News[] = [
   {
     id: 5,
     title:
-      'Nubia Z60 Fold Specifications, Launch Timeline Leaked; 5,000mAh Battery Tipped',
+      'Nubia Z60 Fold Specs, Launch Timeline Leaked 5000mAh Battery Tipped',
     subTitle:
       'Nubia Z60 Fold is reportedly in the works as the first foldable smartphone by the ZTE-owned smartphone brand.',
     coverImage: 'assets/nubia.jpg',
   },
   {
     id: 6,
-    title: 'Google Pixel 7a vs Google Pixel 7: What’s the Difference?',
+    title:
+      'Google Pixel 7a vs Google Pixel 7: What’s the noticable Difference?',
     subTitle:
       "Google Pixel 7a was launched earlier this week alongside Pixel Fold during the company's I/O event.",
     coverImage: 'assets/pixel.jpg',
@@ -174,24 +166,21 @@ export const PhoneNews: News[] = [
 export const LaptopNews: News[] = [
   {
     id: 1,
-    title:
-      'Alienware M16, Alienware x14 R2 Gaming Laptops With GeForce RTX 40-Series GPUs',
+    title: 'Alienware M16, Alienware x14 R2 Gaming Laptops. GeForce RTX ',
     subTitle:
       'Alienware m16 and Alienware x14 R2 gaming laptops were launched by the company on Friday.',
     coverImage: 'assets/alienware.jpg',
   },
   {
     id: 2,
-    title:
-      'Google Announces App Streaming on ChromeOS Beta for Pixel and Xiaomi Phones',
+    title: 'Google Announces App Streaming on ChromeOS Beta for Pixel & Xiaomi',
     subTitle:
       'Google has introduced the App Streaming feature to Chromebooks that will let users access their Android phone apps on the device.',
     coverImage: 'assets/chromeos.jpg',
   },
   {
     id: 3,
-    title:
-      'iPhone Maker Foxconn Buys Massive Piece of Land in Bengaluru to Diversify Production',
+    title: 'iPhone Maker Foxconn Buys Massive Piece to Diversify Production',
     subTitle:
       'Foxconn has manufactured Apple handsets in India since 2019 at its plant in the southern state of Tamil Nadu.',
     coverImage: 'assets/foxconn.jpg',
@@ -199,9 +188,9 @@ export const LaptopNews: News[] = [
   {
     id: 4,
     title:
-      'Google Begins Rolling Out Passkeys, as a More Secure Way to Sign Into Apps and Websites',
+      'Google Begins Rolling Out Passkeys, a Secure Way to Sign Into Apps & Websites',
     subTitle:
-      'After nearly a decade of groundwork and a year of announcing support for the same, Google has finally begun rolling out support for the passkeys authentication system',
+      'After nearly a decade of groundwork and a year of announcing support for same, Google has finally rolling out support for the passkeys authentication system.',
     coverImage: 'assets/passkey.jpg',
   },
   {
@@ -214,9 +203,9 @@ export const LaptopNews: News[] = [
   {
     id: 6,
     title:
-      'Apple Likely to Report 4 Percent Drop in Quarterly Revenue Despite Recovery in China',
+      'Apple Likely to Report 4% Drop in Quarterly Revenue Despite Recovery in China',
     subTitle:
-      'Apple will likely report a more than 4 percent drop in revenue, its second straight quarterly decline, weighed down by consumers',
+      'Apple will likely report a more than 4 percent drop in revenue, its second straight quarterly decline, weighed down by consumers.',
     coverImage: 'assets/apple.jpg',
   },
 ];
@@ -231,8 +220,7 @@ export const GamingNews: News[] = [
   },
   {
     id: 2,
-    title:
-      'Destiny 2 Player Showcases Self-Made and Extremely Accurate Thorn Replica',
+    title: 'Destiny 2 Player Self-Made and Extremely Accurate Thorn Replica',
     subTitle:
       'A Destiny 2 player highlights a replica of their own design which captures the exotic hand cannon Thorn in highly accurate detail.',
     coverImage: 'assets/destiny2.jpg',
@@ -247,15 +235,14 @@ export const GamingNews: News[] = [
   {
     id: 4,
     title:
-      'Call of Duty: Modern Warfare 2 Player Gets Unbelievable 5-Person Kill From Spawn',
+      'Call of Duty: Modern Warfare 2 Player Gets Unbelievable, Kill From Spawn',
     subTitle:
       'A Call of Duty: Modern Warfare 2 player shares an incredible clip in which they get an absurd 5-person kill from their own spawn.',
     coverImage: 'assets/cod2.jpg',
   },
   {
     id: 5,
-    title:
-      "Gamer's Grandma Reaches Absurd Milestone in Animal Crossing: New Horizons",
+    title: "Gamer's Grandma Reaches Absurd Milestone in Animal Crossing",
     subTitle:
       "A gamer online shares their grandma's impressive achievement of reaching an absurd Nook Miles milestone in Animal Crossing: New Horizons.",
     coverImage: 'assets/grandma.jpg',
