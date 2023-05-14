@@ -1,122 +1,20 @@
 <div>
   <!-- Main Title -->
   <div
-    class="flex justify-center items-center w-full shadow border-t bg-slate-200 py-3 font-semibold text-slate-600"
+    class="flex justify-center items-center w-full shadow border-t bg-slate-200 py-3 font-bold text-slate-800"
   >
     LATEST NEWS
   </div>
   <!-- Display Section -->
   <div class="flex flex-col">
     <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-5 border-b items-start">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
+    <div
+      *ngFor="let news of latestNews"
+      class="flex gap-3 cursor-pointer py-3 border-b items-start first:py-5 last:border-none"
+    >
+      <img [src]="news.coverImage" width="120px" class="object-contain" />
       <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3 border-b">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
-      </h1>
-    </div>
-    <!-- Card -->
-    <div class="flex gap-3 cursor-pointer py-3">
-      <img src="assets/1.webp" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
-        7 upgrades I want to see on the rumored iMac 2023
+        {{ news.title }}
       </h1>
     </div>
   </div>
