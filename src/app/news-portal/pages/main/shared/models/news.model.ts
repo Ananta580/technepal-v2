@@ -6,4 +6,5 @@ export interface News {
   description?: string;
   author?: string;
   publishedDate?: string;
+  combinedName?: string;
 }
