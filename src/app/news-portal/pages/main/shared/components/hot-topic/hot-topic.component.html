@@ -8,7 +8,10 @@
   <!-- Display Section -->
   <div class="flex flex-col">
     <!-- Card -->
-    <div class="flex flex-col gap-3 cursor-pointer w-full py-5">
+    <div
+      class="flex flex-col gap-3 cursor-pointer w-full py-5"
+      [routerLink]="'/news/' + hotNews[0].combinedTitle"
+    >
       <img [src]="hotNews[0].coverImage" />
       <h1 class="text-3xl font-semibold hover:text-blue-500">
         {{ hotNews[0].title }}

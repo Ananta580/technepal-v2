@@ -1,1 +1,8 @@
-<p>news-detail works!</p>
+<div
+  class="p-10 mx-auto flex items-center justify-center w-[60%] !text-justify"
+>
+  <quill-view-html
+    [content]="blog?.description ?? ''"
+    theme="snow"
+  ></quill-view-html>
+</div>
