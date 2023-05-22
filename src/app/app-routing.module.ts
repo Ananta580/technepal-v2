@@ -14,6 +14,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'news-admin',
+    loadChildren: () =>
+      import('./news-admin-portal/news-admin-portal.module').then(
+        (m) => m.NewsAdminPortalModule
+      ),
+  },
+  {
     path: 'learn',
     loadChildren: () =>
       import('./learn-portal/learn-portal.module').then(

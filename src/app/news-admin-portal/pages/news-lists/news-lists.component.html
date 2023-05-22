@@ -1,0 +1,18 @@
+<div class="p-6 flex flex-col gap-6">
+  <h4 class="text-lg font-semibold">Blogs/News List</h4>
+
+  <!-- Cards -->
+  <div
+    *ngFor="let news of blogs; let i = index"
+    routerLink="create-edit/{{ news.id }}"
+    class="flex gap-3 cursor-pointer p-5 w-full border-2 border-gray-100 rounded-md"
+  >
+    <img width="300px" src="assets/microchips.jpg" />
+    <div class="flex flex-col gap-2">
+      <h1 class="text-3xl font-semibold hover:text-blue-500">
+        {{ news.title }}
+      </h1>
+      <p>{{ news.subTitle }}</p>
+    </div>
+  </div>
+</div>
