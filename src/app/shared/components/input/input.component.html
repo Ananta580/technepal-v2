@@ -1,0 +1,33 @@
+<div class="flex flex-col">
+  <label class="font-semibold text-xs pb-1">{{ label }}</label>
+  <div
+    class="flex relative items-center flex-row justify-center"
+    *ngIf="type === 'password'; else inputTempalte"
+  >
+    <ng-template [ngTemplateOutlet]="inputTempalte"></ng-template>
+    <i
+      (click)="showPassword = !showPassword"
+      class="fa cursor-pointer text-gray-500 absolute bottom-5 right-[2%] pr-1"
+      [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"
+    ></i>
+  </div>
+  <ng-template #inputTempalte>
+    <input
+      [type]="type == 'password' ? (showPassword ? 'text' : 'password') : type"
+      [value]="value"
+      [id]="id"
+      [disabled]="disabled"
+      [placeholder]="placeholder"
+      [autocomplete]="autocomplete"
+      (input)="onChange($any($event).target.value)"
+      (blur)="onTouched()"
+      class="tn-input"
+      [ngClass]="paddingClass"
+      [name]="id"
+    />
+  </ng-template>
+
+  <small *ngIf="errorMessage" class="text-[#E11900] font-[450] text-sm pt-1">
+    {{ errorMessage }}
+  </small>
+</div>

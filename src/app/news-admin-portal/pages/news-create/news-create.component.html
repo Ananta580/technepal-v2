@@ -7,28 +7,19 @@
   <!-- Form Section -->
   <div class="flex flex-col w-full gap-4">
     <div class="flex gap-6">
-      <input
-        class="border border-gray-200 p-3 w-full"
-        placeholder="Enter Category"
-      />
-      <input
-        class="border border-gray-200 p-3 w-full"
-        placeholder="Enter Blog Title"
-      />
+      <app-input placeholder="Enter Category"></app-input>
+      <app-input placeholder="Enter Blog Title"></app-input>
     </div>
 
-    <textarea
-      class="border border-gray-200 p-3 w-full"
-      rows="2"
+    <app-text-area
+      [rows]="2"
       placeholder="Enter Subtitle of 200 characters . . . . . . ."
-    ></textarea>
+    ></app-text-area>
 
-    <quill-editor class="h-[300px]" theme="snow"></quill-editor>
+    <quill-editor class="h-[250px]" theme="snow"></quill-editor>
 
     <div class="mt-10">
-      <button class="bg-slate-700 px-5 py-2 font-semibold text-white">
-        Save
-      </button>
+      <app-button [paddings]="'px-4 py-2'" border="little">Save</app-button>
     </div>
   </div>
 </div>

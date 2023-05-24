@@ -1,0 +1,20 @@
+<button
+  [disabled]="disabled"
+  [ngClass]="{
+    'w-full': fullWidth,
+    'pointer-events-none': disabled,
+    disabled: disabled,
+    outlined: outline,
+    link: link,
+    white: color === 'white',
+    primary: color === 'primary',
+    secondary: color === 'secondary',
+    'primary-light': color === 'primary-light',
+    'secondary-light': color === 'secondary-light',
+    'rounded-full': border === 'circle',
+    rounded: border === 'little',
+  }"
+  [class]="paddings"
+>
+  <ng-content></ng-content>
+</button>

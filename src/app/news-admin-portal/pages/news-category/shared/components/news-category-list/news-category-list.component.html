@@ -13,8 +13,10 @@
         Add New Category
       </button>
       <app-news-category-create
-        (onCancelClicked)="showAddEditBox = false"
+        (onCancelClicked)="showAddEditBox = false; selectedCategory = null"
+        (onSaved)="loadCategory()"
         *ngIf="showAddEditBox"
+        [category]="selectedCategory"
       ></app-news-category-create>
     </div>
   </div>
@@ -23,52 +25,32 @@
   <div class="grid grid-cols-2 gap-6">
     <!-- Category Card -->
     <div
+      *ngFor="let category of categories"
       class="border border-slate-200 shadow-sm px-6 py-2 flex justify-between items-center"
     >
       <!-- Category info -->
       <div>
         <h1 class="font-semibold text-blue-500 text-lg">
-          {{ "Category Name" | uppercase }}
+          {{ category.name | uppercase }}
         </h1>
-        <h3 class="text-slate-500">Category Code</h3>
+        <h3 class="text-slate-500">{{ category.code }}</h3>
       </div>
       <!-- Action Menu -->
       <div class="flex gap-6">
-        <button
-          class="font-semibold text-white rounded-full bg-slate-700 h-8 w-8 flex items-center justify-center"
+        <app-button
+          paddings="px-2 py-2"
+          border="circle"
+          color="primary"
+          (click)="editCategory(category)"
+          ><span class="material-icons">edit</span></app-button
         >
-          <span class="material-icons text-lg">edit</span>
-        </button>
-        <button
-          class="font-semibold text-white rounded-full bg-red-700 h-8 w-8 flex items-center justify-center"
+        <app-button
+          paddings="px-2 py-2"
+          border="circle"
+          color="secondary"
+          (click)="deleteCategory(category.id)"
+          ><span class="material-icons">delete</span></app-button
         >
-          <span class="material-icons text-lg">delete</span>
-        </button>
-      </div>
-    </div>
-
-    <div
-      class="border border-slate-200 shadow-sm px-6 py-2 flex justify-between items-center"
-    >
-      <!-- Category info -->
-      <div>
-        <h1 class="font-semibold text-blue-500 text-lg">
-          {{ "Category Name" | uppercase }}
-        </h1>
-        <h3 class="text-slate-500">Category Code</h3>
-      </div>
-      <!-- Action Menu -->
-      <div class="flex gap-6">
-        <button
-          class="font-semibold text-white rounded-full bg-slate-700 h-8 w-8 flex items-center justify-center"
-        >
-          <span class="material-icons text-lg">edit</span>
-        </button>
-        <button
-          class="font-semibold text-white rounded-full bg-red-700 h-8 w-8 flex items-center justify-center"
-        >
-          <span class="material-icons text-lg">delete</span>
-        </button>
       </div>
     </div>
   </div>

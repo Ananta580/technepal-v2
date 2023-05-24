@@ -1,0 +1,179 @@
+button {
+  @apply text-base font-semibold flex flex-row gap-3;
+}
+
+.white {
+  color: #0c0d41;
+  transition: 0.4;
+
+  &.outlined {
+    border: 1px solid #0c0d41;
+    background-color: white;
+    color: #0c0d41;
+
+    &:hover {
+      transition: 0.4;
+      border: 1px solid #0c0d41;
+      background-color: #0d072818;
+      color: #0c0d41;
+    }
+  }
+
+  &.link {
+    background-color: transparent;
+    color: #0c0d41;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: rgba(17, 10, 54, 0.08);
+      transition: 0.5s;
+    }
+  }
+
+  &:hover {
+    background-color: #0c0d4119;
+    transition: 0.4;
+  }
+}
+
+.primary {
+  background-color: #7b61ff;
+  color: #ffffff;
+  transition: 0.4;
+
+  &.outlined {
+    border: 1px solid #7b61ff;
+    background-color: white;
+    color: #141414;
+
+    &:hover {
+      transition: 0.4;
+      border: 1px solid #7b61ff;
+      background-color: #7b61ff18;
+      color: #141414;
+    }
+  }
+
+  &.link {
+    background-color: transparent;
+    color: #7b61ff;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: rgba(123, 97, 255, 0.08);
+      transition: 0.5s;
+    }
+  }
+
+  &:hover {
+    background-color: #7b61ff;
+    transition: 0.4;
+  }
+
+  &-light {
+    color: #141414;
+    background-color: #7b61ff9c;
+
+    &:hover {
+      background-color: #7b61ffc4;
+      transition: 0.4;
+    }
+  }
+}
+
+.secondary {
+  background-color: #141414;
+  color: white;
+  transition: 0.4;
+
+  &:hover {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.2)
+      ),
+      #141414;
+    transition: 0.4;
+  }
+
+  &.outlined {
+    transition: 0.4s;
+    color: #141414;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: white;
+  }
+  &.link {
+    background-color: #141414;
+  }
+}
+
+.primary-light {
+  background-color: #7b61ff;
+  color: #ffffff;
+  transition: 0.4;
+
+  &.outlined {
+    border: 1px solid #7b61ff;
+    background-color: white;
+    color: #141414;
+
+    &:hover {
+      transition: 0.4;
+      border: 1px solid #7b61ff;
+      background-color: #7b61ff18;
+      color: #141414;
+    }
+  }
+
+  &.link {
+    background-color: transparent;
+    color: #7b61ff;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: rgba(123, 97, 255, 0.08);
+      transition: 0.5s;
+    }
+  }
+
+  &:hover {
+    background-color: #7b61ff;
+    transition: 0.4;
+  }
+
+  &-light {
+    color: #141414;
+    background-color: #7b61ff9c;
+
+    &:hover {
+      background-color: #7b61ffc4;
+      transition: 0.4;
+    }
+  }
+}
+
+.secondary-light {
+  background-color: #141414;
+  color: white;
+  transition: 0.4;
+
+  &:hover {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.2)
+      ),
+      #141414;
+    transition: 0.4;
+  }
+
+  &.outlined {
+    transition: 0.4s;
+    color: #141414;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: white;
+  }
+  &.link {
+    background-color: #141414;
+  }
+}
