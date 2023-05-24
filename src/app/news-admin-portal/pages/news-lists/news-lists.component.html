@@ -1,18 +1,34 @@
 <div class="p-6 flex flex-col gap-6">
-  <h4 class="text-lg font-semibold">Blogs/News List</h4>
+  <div class="flex justify-between items-center">
+    <div class="flex flex-col">
+      <h4 class="text-lg font-semibold">Blogs/News List</h4>
+      <span>Little more description on this topic is here</span>
+    </div>
+
+    <div>
+      <button
+        routerLink="create-edit"
+        class="bg-slate-700 px-5 py-2 font-semibold text-white"
+      >
+        Add New Blog
+      </button>
+    </div>
+  </div>
 
   <!-- Cards -->
-  <div
-    *ngFor="let news of blogs; let i = index"
-    routerLink="create-edit/{{ news.id }}"
-    class="flex gap-3 cursor-pointer p-5 w-full border-2 border-gray-100 rounded-md"
-  >
-    <img width="300px" src="assets/microchips.jpg" />
-    <div class="flex flex-col gap-2">
-      <h1 class="text-3xl font-semibold hover:text-blue-500">
-        {{ news.title }}
-      </h1>
-      <p>{{ news.subTitle }}</p>
+  <div class="grid grid-cols-2 gap-6">
+    <div
+      *ngFor="let news of blogs; let i = index"
+      routerLink="create-edit/{{ news.id }}"
+      class="flex gap-3 cursor-pointer p-5 border-2 border-gray-100 rounded-md hover:bg-slate-100"
+    >
+      <img width="50%" src="assets/microchips.jpg" />
+      <div class="flex flex-col gap-2">
+        <h1 class="text-3xl font-semibold hover:text-blue-500">
+          {{ news.title }}
+        </h1>
+        <p>{{ news.subTitle }}</p>
+      </div>
     </div>
   </div>
 </div>
