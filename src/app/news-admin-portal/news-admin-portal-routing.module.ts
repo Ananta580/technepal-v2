@@ -28,6 +28,13 @@ const routes: Routes = [
             (m) => m.NewsCreateModule
           ),
       },
+      {
+        path: 'category',
+        loadChildren: () =>
+          import('./pages/news-category/news-category.module').then(
+            (m) => m.NewsCategoryModule
+          ),
+      },
     ],
   },
 ];
