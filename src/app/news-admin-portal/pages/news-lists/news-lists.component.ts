@@ -18,9 +18,6 @@ export class NewsListsComponent implements OnInit {
   getAllBlogs() {
     this.blogService.getAllBlogs().subscribe({
       next: (res: ApiResonse<BlogBE[]>) => {
-        res.data[0].title =
-          'I am a long title , yes I am a really long title hahahaha ahhaa';
-
         this.blogs = res.data;
       },
       error: () => {},

@@ -1,11 +1,18 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, forwardRef } from '@angular/core';
+import { AbstractControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ValidationService } from '../../services/validation.service';
-import { AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-text-area',
   templateUrl: './text-area.component.html',
   styleUrls: ['./text-area.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => TextAreaComponent),
+      multi: true,
+    },
+  ],
 })
 export class TextAreaComponent {
   @Input()

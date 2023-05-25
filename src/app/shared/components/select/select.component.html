@@ -1,0 +1,43 @@
+<div class="flex flex-col gap-2">
+  <div
+    (click)="isOpen = !isOpen"
+    cdkOverlayOrigin
+    #trigger="cdkOverlayOrigin"
+    class="text-slate-400 w-[200px] p-3 border-[1px] border-slate-700 rounded-md cursor-pointer"
+  >
+    <span class="text-gray-800" *ngIf="selected != null; else emptyOption">
+      {{ selected.value }}
+    </span>
+    <ng-template #emptyOption>
+      <span> {{ placeholder }} </span>
+    </ng-template>
+  </div>
+  <!-- This template displays the overlay content and is connected to the button -->
+  <ng-template
+    cdkConnectedOverlay
+    cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop"
+    [cdkConnectedOverlayHasBackdrop]="true"
+    [cdkConnectedOverlayOrigin]="trigger"
+    [cdkConnectedOverlayOpen]="isOpen"
+    (backdropClick)="isOpen = false"
+  >
+    <ul class="bg-gray-50 m-2 shadow-md rounded-sm min-w-[190px]">
+      <li
+        *ngIf="selected != null && optional"
+        class="p-2 py-3 cursor-pointer 'hover:bg-slate-200'"
+        (click)="selectItem(null)"
+      >
+        None
+      </li>
+
+      <li
+        [ngClass]="selected == item ? 'bg-slate-300' : 'hover:bg-slate-200'"
+        class="p-2 py-3 cursor-pointer"
+        *ngFor="let item of items"
+        (click)="selectItem(item)"
+      >
+        {{ item.value }}
+      </li>
+    </ul>
+  </ng-template>
+</div>

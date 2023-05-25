@@ -33,7 +33,7 @@ export class InputComponent {
   disabled = false;
 
   @Input() id = '';
-  @Input() paddingClass = 'py-6 px-4';
+  @Input() paddingClass = 'py-3 p-4';
 
   value = '';
 

@@ -5,21 +5,40 @@
   </h4>
 
   <!-- Form Section -->
-  <div class="flex flex-col w-full gap-4">
-    <div class="flex gap-6">
-      <app-input placeholder="Enter Category"></app-input>
-      <app-input placeholder="Enter Blog Title"></app-input>
+  <div class="flex flex-col w-full gap-4" [formGroup]="blogForm">
+    <div class="flex gap-6 items-end">
+      <app-select
+        placeholder="Choose a Category"
+        [items]="categories"
+        [selected]="selectedCategory"
+        (onSelect)="categoryChanged($event)"
+      ></app-select>
+
+      <app-input
+        formControlName="title"
+        placeholder="Enter Blog Title"
+      ></app-input>
     </div>
 
     <app-text-area
       [rows]="2"
+      formControlName="subTitle"
       placeholder="Enter Subtitle of 200 characters . . . . . . ."
     ></app-text-area>
 
-    <quill-editor class="h-[250px]" theme="snow"></quill-editor>
+    <quill-editor
+      formControlName="description"
+      class="h-[250px]"
+      theme="snow"
+    ></quill-editor>
 
     <div class="mt-10">
-      <app-button [paddings]="'px-4 py-2'" border="little">Save</app-button>
+      <app-button
+        [paddings]="'px-4 py-2'"
+        border="little"
+        (click)="saveBlog()"
+        >{{ edit ? "Update this Blog" : "Save New Blog" }}</app-button
+      >
     </div>
   </div>
 </div>

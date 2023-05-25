@@ -1,7 +1,7 @@
 import { CategoryBE } from './category';
 
 export interface BlogBE {
-  id: string;
+  id?: string;
   title: string;
   combinedTitle: string;
   subTitle: string;
@@ -11,5 +11,5 @@ export interface BlogBE {
   publishedDate: string;
   viewCount: number;
   categoryId: string;
-  category: CategoryBE;
+  category?: CategoryBE;
 }
