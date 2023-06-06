@@ -1,4 +1,5 @@
 import { CategoryBE } from './category';
+import { HotTopicBE } from './hot-topic';
 
 export interface BlogBE {
   id?: string;
@@ -12,4 +13,6 @@ export interface BlogBE {
   viewCount: number;
   categoryId: string;
   category?: CategoryBE;
+  hotTopicId: string;
+  hotTopic?: HotTopicBE;
 }
