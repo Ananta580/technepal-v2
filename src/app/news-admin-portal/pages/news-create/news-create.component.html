@@ -14,6 +14,13 @@
         (onSelect)="categoryChanged($event)"
       ></app-select>
 
+      <app-select
+        placeholder="Choose a Hot Topic"
+        [items]="hotTopics"
+        [selected]="selectedHotTopic"
+        (onSelect)="hotTopicChanged($event)"
+      ></app-select>
+
       <app-input
         formControlName="title"
         placeholder="Enter Blog Title"

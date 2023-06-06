@@ -1,10 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {
-  AbstractControl,
-  FormBuilder,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CategoryBE } from 'src/app/news-admin-portal/shared/model/category';
 import { CategoryService } from 'src/app/news-admin-portal/shared/services/category.service';
 import { ApiResonse } from 'src/app/shared/model/api.response';
@@ -13,7 +15,7 @@ import { ApiResonse } from 'src/app/shared/model/api.response';
   selector: 'app-news-category-create',
   templateUrl: './news-category-create.component.html',
 })
-export class NewsCategoryCreateComponent implements OnInit {
+export class NewsCategoryCreateComponent implements OnChanges {
   @Output() onCancelClicked = new EventEmitter<boolean>();
   @Output() onSaved = new EventEmitter<boolean>();
 
@@ -31,9 +33,11 @@ export class NewsCategoryCreateComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    if (this.category) {
-      this.categoryForm.patchValue(this.category);
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['category']) {
+      if (this.category) {
+        this.categoryForm.patchValue(this.category);
+      }
     }
   }
 
