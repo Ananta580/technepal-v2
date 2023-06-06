@@ -1,8 +1,6 @@
 :host {
-  width: 100%;
-
   .tn-input {
-    @apply w-full border-[1px] border-[#757575] rounded text-base;
+    @apply border-[1px] border-[#757575] rounded text-base;
 
     &:focus {
       border: 1px solid #000;
