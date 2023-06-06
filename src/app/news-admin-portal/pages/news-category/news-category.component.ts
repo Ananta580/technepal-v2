@@ -4,6 +4,4 @@ import { Component } from '@angular/core';
   selector: 'app-news-category',
   templateUrl: './news-category.component.html',
 })
-export class NewsCategoryComponent {
-
-}
+export class NewsCategoryComponent {}

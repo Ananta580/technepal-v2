@@ -35,6 +35,13 @@ const routes: Routes = [
             (m) => m.NewsCategoryModule
           ),
       },
+      {
+        path: 'hot-topic',
+        loadChildren: () =>
+          import('./pages/news-hot-topic/news-hot-topic.module').then(
+            (m) => m.NewsHotTopicModule
+          ),
+      },
     ],
   },
 ];
