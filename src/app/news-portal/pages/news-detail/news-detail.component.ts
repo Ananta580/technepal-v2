@@ -26,10 +26,12 @@ export class NewsDetailComponent implements OnInit {
   }
 
   loadBlog() {
-    this.blogService.getBlogByCombinedTitle(this.combinedTitle).subscribe({
-      next: (res: ApiResonse<BlogBE>) => {
-        this.blog = res.data;
-      },
-    });
+    this.blogService
+      .getBlogByCombinedTitle(this.combinedTitle, true)
+      .subscribe({
+        next: (res: ApiResonse<BlogBE>) => {
+          this.blog = res.data;
+        },
+      });
   }
 }

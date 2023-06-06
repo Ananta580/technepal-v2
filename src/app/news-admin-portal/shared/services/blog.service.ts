@@ -12,8 +12,8 @@ export class BlogService {
   getAllBlogs() {
     return this.api.get('/blog');
   }
-  getBlogByCombinedTitle(title: string) {
-    const params = new HttpParams().set('title', title);
+  getBlogByCombinedTitle(title: string, viewed: boolean = false) {
+    const params = new HttpParams().set('title', title).set('viewed', viewed);
     return this.api.get('/blog/title', params);
   }
   getBlogById(id: string) {
