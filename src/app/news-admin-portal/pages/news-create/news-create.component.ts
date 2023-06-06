@@ -6,6 +6,8 @@ import { CategoryBE } from '../../shared/model/category';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BlogBE } from '../../shared/model/blog';
 import { BlogService } from '../../shared/services/blog.service';
+import { HotTopicBE } from '../../shared/model/hot-topic';
+import { HotTopicService } from '../../shared/services/hot-topic.service';
 
 @Component({
   selector: 'app-news-create',
@@ -14,23 +16,25 @@ import { BlogService } from '../../shared/services/blog.service';
 export class NewsCreateComponent implements OnInit {
   blogId: string = '';
   categoryId: string = '';
+  hotTopicId: string = '';
   edit = false;
 
   categories: { key: CategoryBE; value: string }[] = [];
+  hotTopics: { key: HotTopicBE; value: string }[] = [];
+
   selectedCategory: { key: CategoryBE; value: string } | null = null;
+  selectedHotTopic: { key: HotTopicBE; value: string } | null = null;
 
   blogForm!: FormGroup;
   constructor(
     private _route: ActivatedRoute,
     private fb: FormBuilder,
     private blogService: BlogService,
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private hotTopicService: HotTopicService
   ) {
     this.blogId = this._route.snapshot.paramMap.get('id') ?? '';
     this.edit = this.blogId !== '';
-    if (this.edit) {
-      this.patchForm();
-    }
   }
 
   ngOnInit(): void {
@@ -40,7 +44,12 @@ export class NewsCreateComponent implements OnInit {
       subTitle: ['', Validators.required],
       description: ['', Validators.required],
     });
-    this.loadCategory();
+    if (this.edit) {
+      this.patchForm();
+    } else {
+      this.loadCategory();
+      this.loadHotTopic();
+    }
   }
 
   get title() {
@@ -52,6 +61,9 @@ export class NewsCreateComponent implements OnInit {
       next: (res) => {
         this.blogForm.patchValue(res.data);
         this.categoryId = res.data.categoryId;
+        this.hotTopicId = res.data.hotTopicId;
+        this.loadCategory();
+        this.loadHotTopic();
       },
     });
   }
@@ -71,8 +83,27 @@ export class NewsCreateComponent implements OnInit {
     });
   }
 
+  loadHotTopic() {
+    this.hotTopicService.getAllHotTopics().subscribe({
+      next: (res: ApiResonse<HotTopicBE[]>) => {
+        this.hotTopics = res.data.map((x) => {
+          return { key: x, value: x.code };
+        });
+        if (this.hotTopicId) {
+          this.selectedHotTopic = this.hotTopics.find(
+            (x) => x.key.id === this.hotTopicId
+          )!;
+        }
+      },
+    });
+  }
+
   categoryChanged(select: { key: CategoryBE; value: string } | null) {
     this.selectedCategory = select;
+  }
+
+  hotTopicChanged(select: { key: HotTopicBE; value: string } | null) {
+    this.selectedHotTopic = select;
   }
 
   saveBlog() {
@@ -93,7 +124,10 @@ export class NewsCreateComponent implements OnInit {
     return {
       ...this.blogForm.value,
       categoryId: this.selectedCategory?.key.id ?? null,
-      combinedTitle: this.title?.value.toLowerCase().replaceAll(' ', '-'),
+      hotTopicId: this.selectedHotTopic?.key.id ?? null,
+      combinedTitle: this.title?.value
+        .toLowerCase()
+        .replaceAll(/([^\w]+|\s+)/g, '-'),
       publishedDate: new Date(),
       coverImage: '',
     };

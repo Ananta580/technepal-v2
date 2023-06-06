@@ -1,0 +1,42 @@
+<div class="flex w-full gap-6 items-end justify-end" [formGroup]="hotTopicForm">
+  <div class="flex flex-col">
+    <app-input
+      label="Hot Topic Name"
+      placeholder=""
+      [paddingClass]="'py-2 px-4'"
+      formControlName="name"
+    ></app-input>
+  </div>
+  <div class="flex flex-col">
+    <app-input
+      label="Hot Topic Code"
+      placeholder=""
+      [paddingClass]="'py-2 px-4'"
+      formControlName="code"
+    ></app-input>
+  </div>
+  <div class="flex flex-col">
+    <app-input
+      type="number"
+      placeholder=""
+      [paddingClass]="'py-2 px-4 '"
+      formControlName="priority"
+    ></app-input>
+  </div>
+  <div class="flex gap-4 items-center">
+    <app-button
+      paddings="px-5 py-2"
+      border="little"
+      color="secondary"
+      (click)="saveHotTopic()"
+      >Save Changes</app-button
+    >
+    <app-button
+      paddings="px-2 py-2"
+      border="circle"
+      color="primary"
+      (click)="cancel()"
+      ><span class="material-icons">close</span></app-button
+    >
+  </div>
+</div>
