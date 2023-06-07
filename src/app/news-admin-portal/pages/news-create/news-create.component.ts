@@ -8,6 +8,7 @@ import { BlogBE } from '../../shared/model/blog';
 import { BlogService } from '../../shared/services/blog.service';
 import { HotTopicBE } from '../../shared/model/hot-topic';
 import { HotTopicService } from '../../shared/services/hot-topic.service';
+import { AUTHORS } from 'src/app/shared/model/author.constant';
 
 @Component({
   selector: 'app-news-create',
@@ -129,7 +130,8 @@ export class NewsCreateComponent implements OnInit {
         .toLowerCase()
         .replaceAll(/([^\w]+|\s+)/g, '-'),
       publishedDate: new Date(),
-      coverImage: '',
+      coverImage: 'assets/blockchain.jpg',
+      authorId: AUTHORS[0].id,
     };
   }
 }

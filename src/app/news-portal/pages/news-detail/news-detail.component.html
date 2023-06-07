@@ -7,10 +7,16 @@
     <h1 class="text-3xl text-justify font-semibold text-gray-600">
       {{ blog?.title }}
     </h1>
-    <div>
-      Published By <span class="text-blue-500">Ananta Poudel</span> | Published
-      On
-      <span class="text-blue-500">{{ "2022-04-19" }}</span>
+    <div class="flex gap-2 items-center">
+      Published By
+      <div class="flex gap-2 items-center">
+        <div class="flex h-7 w-7 object-cover rounded-full">
+          <img class="rounded-full" [src]="author?.profileUrl" />
+        </div>
+        <span class="text-blue-500"> {{ author?.name }}</span>
+      </div>
+      | Published On
+      <span class="text-blue-500">{{ blog?.publishedDate | date }}</span>
     </div>
 
     <p class="text-gray-500">{{ blog?.subTitle }}</p>

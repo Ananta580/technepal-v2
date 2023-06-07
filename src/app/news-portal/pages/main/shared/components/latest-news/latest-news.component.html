@@ -11,6 +11,7 @@
     <div
       *ngFor="let news of latestNews"
       class="flex gap-3 cursor-pointer py-3 border-b items-start first:py-5 last:border-none"
+      [routerLink]="'/news/' + news.combinedTitle"
     >
       <img [src]="news.coverImage" width="120px" class="object-contain" />
       <h1 class="text-lg font-normal hover:text-blue-500">

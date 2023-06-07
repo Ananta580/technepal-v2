@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiResonse } from 'src/app/shared/model/api.response';
 import { BlogCardBE } from '../../models/blog';
 import { BlogService } from '../../services/blog.service';
+import { HotNews } from '../../mockup';
 
 @Component({
   selector: 'app-hot-topic',

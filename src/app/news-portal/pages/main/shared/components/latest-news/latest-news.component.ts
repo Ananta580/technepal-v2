@@ -18,7 +18,7 @@ export class LatestNewsComponent {
   }
 
   getHotNews() {
-    this.blogService.getHotNews().subscribe({
+    this.blogService.getLatestNews().subscribe({
       next: (res: ApiResonse<BlogCardBE[]>) => {
         this.latestNews = res.data;
       },
