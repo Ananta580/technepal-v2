@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared/shared.module';
 import { NewsDetailRoutingModule } from './news-detail-routing.module';
 import { NewsDetailComponent } from './news-detail.component';
-import { QuillModule } from 'ngx-quill';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [NewsDetailComponent],
@@ -12,7 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    QuillModule.forRoot(),
+    SharedModule,
     NewsDetailRoutingModule,
   ],
 })

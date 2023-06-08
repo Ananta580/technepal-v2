@@ -33,11 +33,41 @@
       placeholder="Enter Subtitle of 200 characters . . . . . . ."
     ></app-text-area>
 
-    <quill-editor
+    <editor
       formControlName="description"
-      class="h-[250px]"
-      theme="snow"
-    ></quill-editor>
+      [init]="{
+        height: 500,
+        plugins: [
+          'a11ychecker',
+          'advlist',
+          'advcode',
+          'advtable',
+          'autolink',
+          'checklist',
+          'export',
+          'lists',
+          'link',
+          'image',
+          'charmap',
+          'preview',
+          'anchor',
+          'searchreplace',
+          'visualblocks',
+          'powerpaste',
+          'fullscreen',
+          'formatpainter',
+          'insertdatetime',
+          'media',
+          'table',
+          'help',
+          'wordcount'
+        ],
+        toolbar:
+          'undo redo | casechange blocks | bold italic textcolor backcolor | \
+         alignleft aligncenter alignright alignjustify | \
+         bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+      }"
+    ></editor>
 
     <div class="mt-10">
       <app-button

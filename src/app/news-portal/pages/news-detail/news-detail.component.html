@@ -22,11 +22,5 @@
     <p class="text-gray-500">{{ blog?.subTitle }}</p>
   </div>
 
-  <div class="flex items-center justify-center">
-    <quill-view-html
-      [content]="blog?.description ?? ''"
-      theme="snow"
-    ></quill-view-html>
-  </div>
+  <app-preview class="px-4" [value]="blog?.description ?? ''"></app-preview>
 </div>
-<!-- Top Content -->

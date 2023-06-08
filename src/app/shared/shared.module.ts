@@ -6,6 +6,8 @@ import { CardComponent } from './components/card/card.component';
 import { InputComponent } from './components/input/input.component';
 import { TextAreaComponent } from './components/text-area/text-area.component';
 import { SelectComponent } from './components/select/select.component';
+import { PreviewComponent } from './components/preview/preview.component';
+import { NoSanitizePipe } from './pipe/nosanitize.pipe';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { SelectComponent } from './components/select/select.component';
     TextAreaComponent,
     CardComponent,
     SelectComponent,
+    PreviewComponent,
+    NoSanitizePipe,
   ],
   imports: [CommonModule, OverlayModule],
   providers: [],
@@ -23,6 +27,8 @@ import { SelectComponent } from './components/select/select.component';
     SelectComponent,
     TextAreaComponent,
     CardComponent,
+    PreviewComponent,
+    NoSanitizePipe,
   ],
 })
 export class SharedModule {}

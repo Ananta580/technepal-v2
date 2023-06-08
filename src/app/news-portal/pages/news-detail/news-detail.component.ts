@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { News } from '../main/shared/models/news.model';
-import { HotNews } from '../main/shared/mockup';
+import { BlogBE } from 'src/app/news-admin-portal/shared/model/blog';
 import { BlogService } from 'src/app/news-admin-portal/shared/services/blog.service';
 import { ApiResonse } from 'src/app/shared/model/api.response';
-import { BlogBE } from 'src/app/news-admin-portal/shared/model/blog';
 import { AUTHORS, Author } from 'src/app/shared/model/author.constant';
 
 @Component({
