@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from '../../shared/services/category.service';
 import { ApiResonse } from 'src/app/shared/model/api.response';
 import { CategoryBE } from '../../shared/model/category';
@@ -30,6 +30,7 @@ export class NewsCreateComponent implements OnInit {
   constructor(
     private _route: ActivatedRoute,
     private fb: FormBuilder,
+    private router: Router,
     private blogService: BlogService,
     private categoryService: CategoryService,
     private hotTopicService: HotTopicService
@@ -112,11 +113,15 @@ export class NewsCreateComponent implements OnInit {
     if (!payload.id) {
       delete payload.id;
       this.blogService.createBlog(payload).subscribe({
-        next: (res) => {},
+        next: (res) => {
+          this.router.navigate(['news-admin']);
+        },
       });
     } else {
       this.blogService.editBlog(payload).subscribe({
-        next: (res) => {},
+        next: (res) => {
+          this.router.navigate(['news-admin']);
+        },
       });
     }
   }
