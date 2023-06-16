@@ -20,11 +20,17 @@ export class BlogService {
     const params = new HttpParams().set('id', id);
     return this.api.get('/blog/id', params);
   }
-  createBlog(blog: BlogBE) {
-    return this.api.post(`/blog`, blog);
+  createBlog(blog: BlogBE, file: File) {
+    const formData = new FormData();
+    formData.append('CoverImage', file);
+    formData.append('Blog', JSON.stringify(blog));
+    return this.api.postFile(`/blog`, formData);
   }
-  editBlog(blog: BlogBE) {
-    return this.api.put(`/blog`, blog);
+  editBlog(blog: BlogBE, file: File) {
+    const formData = new FormData();
+    formData.append('CoverImage', file);
+    formData.append('Blog', JSON.stringify(blog));
+    return this.api.putFile(`/blog`, formData);
   }
   deleteBlog(id: string) {
     return this.api.delete(`/blog?id=${id}`);

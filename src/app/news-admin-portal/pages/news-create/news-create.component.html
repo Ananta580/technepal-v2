@@ -22,9 +22,13 @@
       ></app-select>
 
       <app-input
+      class="w-[50%]"
         formControlName="title"
         placeholder="Enter Blog Title"
       ></app-input>
+
+  <img class="object-cover" width="100px" *ngIf="coverImageURL?.value" [src]="coverImageURL?.value">
+      <input type="file" (change)="onFileSelected($event)">
     </div>
 
     <app-text-area

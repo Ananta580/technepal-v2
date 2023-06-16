@@ -9,6 +9,12 @@ import { BlogService } from '../../shared/services/blog.service';
 import { HotTopicBE } from '../../shared/model/hot-topic';
 import { HotTopicService } from '../../shared/services/hot-topic.service';
 import { AUTHORS } from 'src/app/shared/model/author.constant';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+
+export interface FileHandle {
+  file: File;
+  url: SafeUrl;
+}
 
 @Component({
   selector: 'app-news-create',
@@ -27,7 +33,11 @@ export class NewsCreateComponent implements OnInit {
   selectedHotTopic: { key: HotTopicBE; value: string } | null = null;
 
   blogForm!: FormGroup;
+
+  coverImage!: FileHandle;
+
   constructor(
+    private sanitizer: DomSanitizer,
     private _route: ActivatedRoute,
     private fb: FormBuilder,
     private router: Router,
@@ -45,6 +55,7 @@ export class NewsCreateComponent implements OnInit {
       title: ['', Validators.required],
       subTitle: ['', Validators.required],
       description: ['', Validators.required],
+      coverImage: [''],
     });
     if (this.edit) {
       this.patchForm();
@@ -58,6 +69,10 @@ export class NewsCreateComponent implements OnInit {
     return this.blogForm.get('title');
   }
 
+  get coverImageURL() {
+    return this.blogForm.get('coverImage');
+  }
+
   patchForm() {
     this.blogService.getBlogById(this.blogId).subscribe({
       next: (res) => {
@@ -68,6 +83,19 @@ export class NewsCreateComponent implements OnInit {
         this.loadHotTopic();
       },
     });
+  }
+
+  onFileSelected(event: any) {
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      const url = this.sanitizer.bypassSecurityTrustUrl(
+        window.URL.createObjectURL(file)
+      );
+      this.coverImage = {
+        file,
+        url,
+      };
+    }
   }
 
   loadCategory() {
@@ -112,17 +140,21 @@ export class NewsCreateComponent implements OnInit {
     const payload = this.createPayload();
     if (!payload.id) {
       delete payload.id;
-      this.blogService.createBlog(payload).subscribe({
-        next: (res) => {
-          this.router.navigate(['news-admin']);
-        },
-      });
+      this.blogService
+        .createBlog(payload, this.coverImage?.file ?? null)
+        .subscribe({
+          next: (res) => {
+            this.router.navigate(['news-admin']);
+          },
+        });
     } else {
-      this.blogService.editBlog(payload).subscribe({
-        next: (res) => {
-          this.router.navigate(['news-admin']);
-        },
-      });
+      this.blogService
+        .editBlog(payload, this.coverImage?.file ?? null)
+        .subscribe({
+          next: (res) => {
+            this.router.navigate(['news-admin']);
+          },
+        });
     }
   }
 
@@ -135,7 +167,6 @@ export class NewsCreateComponent implements OnInit {
         .toLowerCase()
         .replaceAll(/([^\w]+|\s+)/g, '-'),
       publishedDate: new Date(),
-      coverImage: 'assets/blockchain.jpg',
       authorId: AUTHORS[0].id,
     };
   }

@@ -1,9 +1,9 @@
-<div class="flex flex-col mx-auto w-[60%] py-12 gap-8">
+<div class="flex flex-col mx-auto w-[60%] max-xl:w-[90%] py-12 gap-8">
   <!-- Ads Section -->
   <div class="bg-slate-50 py-16 flex w-full justify-center text-gray-400">
     Ads
   </div>
-  <div class="px-4 flex flex-col gap-3">
+  <div class="max-xl:px-0 px-4 flex flex-col gap-3">
     <h1 class="text-3xl text-justify font-semibold text-gray-600">
       {{ blog?.title }}
     </h1>
@@ -22,5 +22,5 @@
     <p class="text-gray-500">{{ blog?.subTitle }}</p>
   </div>
 
-  <app-preview class="px-4" [value]="blog?.description ?? ''"></app-preview>
+  <app-preview class="max-xl:px-0 px-4" [value]="blog?.description ?? ''"></app-preview>
 </div>
