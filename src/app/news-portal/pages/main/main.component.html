@@ -52,21 +52,12 @@
         <app-hot-topic class="w-4/6"></app-hot-topic>
         <app-latest-news class="w-2/6"></app-latest-news>
       </div>
-      <!-- Phone Section -->
-      <app-flat-display-section
-        sectionName="Phones"
-        sectionCode="PHONE"
-      ></app-flat-display-section>
-      <!-- Laptop Section -->
-      <app-flat-display-section
-        sectionName="Laptops & Computing"
-        sectionCode="LAPTOP"
-      ></app-flat-display-section>
 
-      <!-- Gaming Section -->
+      <!-- Category Section -->
       <app-flat-display-section
-        sectionName="Gamings"
-        sectionCode="GAMING"
+        *ngFor="let category of categoryList"
+        [sectionName]="category.name | uppercase"
+        [sectionCode]="category.id"
       ></app-flat-display-section>
     </div>
   </div>

@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BlogService } from './shared/services/blog.service';
+import { CategoryService } from './shared/services/category.service';
+import { ApiResonse } from 'src/app/shared/model/api.response';
+import { CategoryBE } from './shared/models/category';
 
 @Component({
   selector: 'app-main',
@@ -28,4 +32,19 @@ import { Component } from '@angular/core';
   ],
   templateUrl: './main.component.html',
 })
-export class MainComponent {}
+export class MainComponent implements OnInit {
+  categoryList: CategoryBE[] = [];
+  constructor(private categoryService: CategoryService) {}
+
+  ngOnInit(): void {
+    this.getAllCategories();
+  }
+
+  getAllCategories() {
+    this.categoryService.getAllCategorys().subscribe({
+      next: (res: ApiResonse<CategoryBE[]>) => {
+        this.categoryList = res.data;
+      },
+    });
+  }
+}
