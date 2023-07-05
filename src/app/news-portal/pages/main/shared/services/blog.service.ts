@@ -15,4 +15,8 @@ export class BlogService {
   getLatestNews() {
     return this.api.get('/blog/latest');
   }
+
+  getBlogByCategoryId(categoryId: string) {
+    return this.api.get(`/blog/category?Id=${categoryId}`);
+  }
 }

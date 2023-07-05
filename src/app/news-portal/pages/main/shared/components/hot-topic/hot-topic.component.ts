@@ -9,7 +9,11 @@ import { HotNews } from '../../mockup';
   templateUrl: './hot-topic.component.html',
 })
 export class HotTopicComponent implements OnInit {
-  hotNews: BlogCardBE[] = [];
+  hotNews: BlogCardBE[] = [
+    {
+      combinedTitle: '',
+    } as any,
+  ];
 
   constructor(private blogService: BlogService) {}
 
