@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AuthGuardService } from './shared/Guard/AuthGuard';
 
 const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'admin-login',
+    component: AdminLoginComponent,
   },
   {
     path: 'news',
@@ -19,6 +25,7 @@ const routes: Routes = [
       import('./news-admin-portal/news-admin-portal.module').then(
         (m) => m.NewsAdminPortalModule
       ),
+    canActivate: [AuthGuardService],
   },
   {
     path: 'learn',

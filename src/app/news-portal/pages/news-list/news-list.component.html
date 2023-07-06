@@ -1,9 +1,7 @@
-<div *ngIf="sectionNews.length > 0">
-  <!-- Main Title -->
-  <div
-    class="flex justify-center items-center w-full shadow border-t bg-slate-200 py-3 font-bold text-slate-800"
-  >
-    {{ sectionName | uppercase }}
+<div class="flex flex-col mx-auto w-[60%] max-xl:w-[90%] py-12 gap-8">
+  <!-- Ads Section -->
+  <div class="bg-slate-50 py-16 flex w-full justify-center text-gray-400">
+    Ads
   </div>
   <!-- Display Section -->
   <div class="flex flex-col">
@@ -11,7 +9,7 @@
     <div class="flex gap-6">
       <!-- Card -->
       <div
-        *ngFor="let news of sectionNews | slice : 0 : 3"
+        *ngFor="let news of blogs | slice : 0 : 3"
         class="flex flex-col gap-3 cursor-pointer py-5 w-2/6"
         [routerLink]="'/news/' + news.combinedTitle"
       >
@@ -26,7 +24,7 @@
     <div class="flex gap-6">
       <!-- Card -->
       <div
-        *ngFor="let news of sectionNews | slice : 3 : 6"
+        *ngFor="let news of blogs | slice : 3 : 6"
         class="flex flex-col gap-3 cursor-pointer py-5 w-2/6"
       >
         <img [src]="news.coverImage" />

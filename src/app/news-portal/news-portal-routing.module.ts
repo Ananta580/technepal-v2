@@ -13,6 +13,27 @@ const routes: Routes = [
           import('./pages/main/main.module').then((m) => m.MainModule),
       },
       {
+        path: 'hot/:hotTopicId',
+        loadChildren: () =>
+          import('./pages/news-list/news-list.module').then(
+            (m) => m.NewsListModule
+          ),
+      },
+      {
+        path: 'category/:categoryId',
+        loadChildren: () =>
+          import('./pages/news-list/news-list.module').then(
+            (m) => m.NewsListModule
+          ),
+      },
+      {
+        path: 'search',
+        loadChildren: () =>
+          import('./pages/news-list/news-list.module').then(
+            (m) => m.NewsListModule
+          ),
+      },
+      {
         // This name is unique and is a combined name not a normal name, used to fetch detail from Api
         path: ':name',
         loadChildren: () =>

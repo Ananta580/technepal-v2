@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { CategoryBE } from '../news-admin-portal/shared/model/category';
+import { CategoryService } from '../news-admin-portal/shared/services/category.service';
+import { ApiResonse } from '../shared/model/api.response';
 
 @Component({
   selector: 'app-news-portal',

@@ -15,20 +15,17 @@ export class ApiService {
 
   formDataOptions: any;
   constructor(private httpClient: HttpClient) {
-    if (localStorage.getItem('token')) {
+    if (localStorage.getItem('tnTOKEN')) {
       this.options = {
         headers: new HttpHeaders()
           .set('Content-Type', 'application/json')
-          .set(
-            'Authorization',
-            `Token ${JSON.parse(localStorage.getItem('token')!)}`
-          ),
+          .set('Authorization', `Bearer ${localStorage.getItem('tnTOKEN')}`),
       };
 
       this.formDataOptions = {
         headers: new HttpHeaders().set(
           'Authorization',
-          `Token ${JSON.parse(localStorage.getItem('token')!)}`
+          `Bearer ${localStorage.getItem('tnTOKEN')}`
         ),
       };
     }

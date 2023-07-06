@@ -14,34 +14,12 @@
       </div>
       <!-- Scroll bar with style -->
       <div class="flex items-center w-full h-full overflow-x-auto scrollbar">
-        <button class="px-3 py-1 flex-none hover:text-blue-500">
-          Chat GPT
-        </button>
-        <button class="px-3 py-1 flex-none hover:text-blue-500">
-          iPhone 15
-        </button>
-        <button class="px-3 py-1 flex-none hover:text-blue-500">Bard AI</button>
-        <button class="px-3 py-1 flex-none hover:text-blue-500">
-          Angular 16
-        </button>
-        <button class="px-3 py-1 flex-none hover:text-blue-500">
-          Google I|O 2023
-        </button>
-        <button class="px-3 py-1 flex-none hover:text-blue-500">.NET 8</button>
-        <button class="px-3 py-1 flex-none hover:text-blue-500">
-          Share Market
-        </button>
-        <button class="px-3 py-1 flex-none hover:text-blue-500">
-          New Laptops
-        </button>
-        <button class="px-3 py-1 flex-none hover:text-blue-500">
-          New Mobiles
-        </button>
-        <button class="px-3 py-1 flex-none hover:text-blue-500">
-          React JS 1.9
-        </button>
-        <button class="px-3 py-1 flex-none hover:text-blue-500">
-          Font Awesome 9.0
+        <button
+          *ngFor="let hotTopic of hotTopicList"
+          class="px-3 py-1 flex-none hover:text-blue-500"
+          (click)="redirectToHotTopicList(hotTopic.id)"
+        >
+          {{ hotTopic.name }}
         </button>
       </div>
     </div>

@@ -3,6 +3,9 @@ import { BlogService } from './shared/services/blog.service';
 import { CategoryService } from './shared/services/category.service';
 import { ApiResonse } from 'src/app/shared/model/api.response';
 import { CategoryBE } from './shared/models/category';
+import { HotTopicService } from 'src/app/news-admin-portal/shared/services/hot-topic.service';
+import { HotTopicBE } from 'src/app/news-admin-portal/shared/model/hot-topic';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -34,10 +37,16 @@ import { CategoryBE } from './shared/models/category';
 })
 export class MainComponent implements OnInit {
   categoryList: CategoryBE[] = [];
-  constructor(private categoryService: CategoryService) {}
+  hotTopicList: HotTopicBE[] = [];
+  constructor(
+    private router: Router,
+    private categoryService: CategoryService,
+    private hotTopicService: HotTopicService
+  ) {}
 
   ngOnInit(): void {
     this.getAllCategories();
+    this.loadHotTopics();
   }
 
   getAllCategories() {
@@ -46,5 +55,17 @@ export class MainComponent implements OnInit {
         this.categoryList = res.data;
       },
     });
+  }
+
+  loadHotTopics() {
+    this.hotTopicService.getAllHotTopics().subscribe({
+      next: (res: ApiResonse<HotTopicBE[]>) => {
+        this.hotTopicList = res.data;
+      },
+    });
+  }
+
+  redirectToHotTopicList(id: string) {
+    this.router.navigateByUrl(`news/hot/${id}`);
   }
 }

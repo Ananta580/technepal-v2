@@ -19,4 +19,12 @@ export class BlogService {
   getBlogByCategoryId(categoryId: string) {
     return this.api.get(`/blog/category?Id=${categoryId}`);
   }
+
+  getBlogByHotTopicId(hotTopicId: string) {
+    return this.api.get(`/blog/hottopic?Id=${hotTopicId}`);
+  }
+
+  searchBlogs(searchString: string) {
+    return this.api.get(`/blog/search?search=${searchString}`);
+  }
 }
