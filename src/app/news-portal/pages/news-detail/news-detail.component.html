@@ -22,5 +22,15 @@
     <p class="text-gray-500">{{ blog?.subTitle }}</p>
   </div>
 
-  <app-preview class="max-xl:px-0 px-4" [value]="blog?.description ?? ''"></app-preview>
+  <app-preview
+    class="max-xl:px-0 px-4"
+    [value]="blog?.description ?? ''"
+  ></app-preview>
+</div>
+
+<div
+  *ngIf="isLoading"
+  class="flex w-screen h-screen items-center justify-center bg-[#0000001d] fixed top-0"
+>
+  <app-spinner></app-spinner>
 </div>

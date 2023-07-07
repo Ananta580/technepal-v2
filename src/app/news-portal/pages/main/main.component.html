@@ -40,3 +40,10 @@
     </div>
   </div>
 </div>
+
+<div
+  *ngIf="isLoading"
+  class="flex w-screen h-screen items-center justify-center bg-[#0000001d] fixed top-0"
+>
+  <app-spinner></app-spinner>
+</div>

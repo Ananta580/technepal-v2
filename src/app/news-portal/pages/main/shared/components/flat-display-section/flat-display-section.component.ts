@@ -13,6 +13,8 @@ export class FlatDisplaySectionComponent implements OnInit {
   @Input() sectionCode = '';
 
   sectionNews: News[] = [];
+
+  isLoading = false;
   constructor(private blogService: BlogService) {}
 
   ngOnInit(): void {
@@ -20,9 +22,14 @@ export class FlatDisplaySectionComponent implements OnInit {
   }
 
   getBlogsByCategory() {
+    this.isLoading = true;
     this.blogService.getBlogByCategoryId(this.sectionCode).subscribe({
       next: (res: ApiResonse<News[]>) => {
+        this.isLoading = false;
         this.sectionNews = res.data;
+      },
+      error: () => {
+        this.isLoading = false;
       },
     });
   }

@@ -28,8 +28,16 @@
       </div>
       <!-- Search Icon -->
       <div class="flex gap-2 px-2 items-center bg-gray-300 rounded-sm h-8">
-        <input class="outline-none bg-transparent" placeholder="Search" />
-        <span class="material-icons text-gray-500 cursor-pointer">search</span>
+        <input
+          [(ngModel)]="searchString"
+          class="outline-none bg-transparent"
+          placeholder="Search"
+        />
+        <span
+          (click)="search()"
+          class="material-icons text-gray-500 cursor-pointer"
+          >search</span
+        >
       </div>
     </div>
   </div>

@@ -25,6 +25,6 @@ export class BlogService {
   }
 
   searchBlogs(searchString: string) {
-    return this.api.get(`/blog/search?search=${searchString}`);
+    return this.api.get(`/blog/search?searchString=${searchString}`);
   }
 }

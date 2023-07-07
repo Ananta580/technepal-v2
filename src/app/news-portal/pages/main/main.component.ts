@@ -38,6 +38,8 @@ import { Router } from '@angular/router';
 export class MainComponent implements OnInit {
   categoryList: CategoryBE[] = [];
   hotTopicList: HotTopicBE[] = [];
+
+  isLoading = false;
   constructor(
     private router: Router,
     private categoryService: CategoryService,
@@ -50,17 +52,27 @@ export class MainComponent implements OnInit {
   }
 
   getAllCategories() {
+    this.isLoading = true;
     this.categoryService.getAllCategorys().subscribe({
       next: (res: ApiResonse<CategoryBE[]>) => {
+        this.isLoading = false;
         this.categoryList = res.data;
+      },
+      error: () => {
+        this.isLoading = false;
       },
     });
   }
 
   loadHotTopics() {
+    this.isLoading = true;
     this.hotTopicService.getAllHotTopics().subscribe({
       next: (res: ApiResonse<HotTopicBE[]>) => {
+        this.isLoading = false;
         this.hotTopicList = res.data;
+      },
+      error: () => {
+        this.isLoading = false;
       },
     });
   }

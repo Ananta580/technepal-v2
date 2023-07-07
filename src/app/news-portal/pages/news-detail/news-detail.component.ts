@@ -16,6 +16,8 @@ export class NewsDetailComponent implements OnInit {
   authors = AUTHORS;
   author?: Author;
 
+  isLoading = false;
+
   constructor(
     private _route: ActivatedRoute,
     private blogService: BlogService
@@ -28,12 +30,17 @@ export class NewsDetailComponent implements OnInit {
   }
 
   loadBlog() {
+    this.isLoading = true;
     this.blogService
       .getBlogByCombinedTitle(this.combinedTitle, true)
       .subscribe({
         next: (res: ApiResonse<BlogBE>) => {
+          this.isLoading = false;
           this.blog = res.data;
           this.author = this.authors.find((x) => x.id == this.blog?.authorId);
+        },
+        error: () => {
+          this.isLoading = false;
         },
       });
   }

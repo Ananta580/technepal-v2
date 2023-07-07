@@ -8,6 +8,7 @@ import { TextAreaComponent } from './components/text-area/text-area.component';
 import { SelectComponent } from './components/select/select.component';
 import { PreviewComponent } from './components/preview/preview.component';
 import { NoSanitizePipe } from './pipe/nosanitize.pipe';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +19,12 @@ import { NoSanitizePipe } from './pipe/nosanitize.pipe';
     SelectComponent,
     PreviewComponent,
     NoSanitizePipe,
+    SpinnerComponent,
   ],
   imports: [CommonModule, OverlayModule],
   providers: [],
   exports: [
+    SpinnerComponent,
     ButtonComponent,
     InputComponent,
     SelectComponent,
