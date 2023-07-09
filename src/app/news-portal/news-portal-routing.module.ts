@@ -34,6 +34,20 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'popular',
+        loadChildren: () =>
+          import('./pages/popular-list/popular-list.module').then(
+            (m) => m.PopularListModule
+          ),
+      },
+      {
+        path: 'latest',
+        loadChildren: () =>
+          import('./pages/latest-list/latest-list.module').then(
+            (m) => m.LatestListModule
+          ),
+      },
+      {
         // This name is unique and is a combined name not a normal name, used to fetch detail from Api
         path: ':name',
         loadChildren: () =>

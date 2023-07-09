@@ -38,4 +38,8 @@ export class NavBarComponent {
     this.selectedCategoryId = id;
     this.router.navigateByUrl(`news/category/${id}`);
   }
+
+  gotoPage(page: 'popular' | 'latest') {
+    this.router.navigateByUrl(`news/${page}`);
+  }
 }
