@@ -1,0 +1,68 @@
+.gradient-container{
+    background: linear-gradient(
+        150deg,
+        #7795f8 15%,
+        #6772e5 70%,
+        #555abf 94%
+      );
+}
+
+.contribute-gradient{
+  background: linear-gradient(87deg,#172b4d 0,#1a174d 100%)!important;
+}
+
+.circle{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  opacity: 0.1;
+  border-radius: 100%;
+  &-1{
+    top:-100px;
+    left: -100px;
+  }
+  &-2{
+    top:50vh;
+    left: 200px;
+  }
+  &-3{
+    top:35vh;
+    left: 30px;
+    scale: 0.6;
+  }
+  &-4{
+    top:40vh;
+    left: 50vw;
+    scale: 0.7;
+    opacity: 0.04;
+  }
+  &-5{
+    top:100px;
+    right: 20px;
+    scale: 0.7;
+  }
+  &-6{
+    top:30vh;
+    right: 200px;
+    scale: 0.8;
+  }
+  &-8{
+    top:32vh;
+    right: 100px;
+    scale: 0.5;
+    opacity: 0.03;
+  }
+  &-7{
+    top:70vh;
+    right: 30vw;
+    scale: 0.4;
+  }
+
+  &-9{
+    top:70vh;
+    right: 10px;
+    scale: 0.7;
+  }
+
+}
