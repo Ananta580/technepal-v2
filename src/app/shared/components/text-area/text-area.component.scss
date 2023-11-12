@@ -2,10 +2,11 @@
   width: 100%;
 
   .tn-input {
-    @apply w-full p-4 py-3 border-[1px] border-[#757575] rounded text-base;
+    @apply w-full p-4 py-3 border-[2px] border-[#e2e2e2] rounded text-base;
+    outline: none;
 
     &:focus {
-      border: 1px solid #000;
+      border: 2px solid #a50854;
     }
   }
 }

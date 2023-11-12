@@ -3,7 +3,7 @@
     (click)="isOpen = !isOpen"
     cdkOverlayOrigin
     #trigger="cdkOverlayOrigin"
-    class="text-slate-400 w-[200px] p-3 border-[1px] border-slate-700 rounded-md cursor-pointer"
+    class="text-slate-400 w-[200px] p-3 border-[2px] border-[#e2e2e2] rounded-md cursor-pointer"
   >
     <span class="text-gray-800" *ngIf="selected != null; else emptyOption">
       {{ selected.value }}
@@ -21,17 +21,17 @@
     [cdkConnectedOverlayOpen]="isOpen"
     (backdropClick)="isOpen = false"
   >
-    <ul class="bg-gray-50 m-2 shadow-md rounded-sm min-w-[190px]">
+    <ul class="bg-gray-50 drop-shadow-md rounded-sm min-w-[200px]">
       <li
         *ngIf="selected != null && optional"
-        class="p-2 py-3 cursor-pointer 'hover:bg-slate-200'"
+        class="p-2 py-3 cursor-pointer 'hover:bg-pink-200'"
         (click)="selectItem(null)"
       >
         None
       </li>
 
       <li
-        [ngClass]="selected == item ? 'bg-slate-300' : 'hover:bg-slate-200'"
+        [ngClass]="selected == item ? 'bg-pink-300' : 'hover:bg-pink-200'"
         class="p-2 py-3 cursor-pointer"
         *ngFor="let item of items"
         (click)="selectItem(item)"

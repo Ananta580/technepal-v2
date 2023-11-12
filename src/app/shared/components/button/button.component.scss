@@ -37,26 +37,26 @@ button {
 }
 
 .primary {
-  background-color: #7b61ff;
+  background-color: #831843;
   color: #ffffff;
   transition: 0.4;
 
   &.outlined {
-    border: 1px solid #7b61ff;
+    border: 1px solid #831843;
     background-color: white;
-    color: #141414;
+    color: #0F172A;
 
     &:hover {
       transition: 0.4;
-      border: 1px solid #7b61ff;
-      background-color: #7b61ff18;
-      color: #141414;
+      border: 1px solid #831843;
+      background-color: #83184318;
+      color: #0F172A;
     }
   }
 
   &.link {
     background-color: transparent;
-    color: #7b61ff;
+    color: #831843;
     transition: 0.5s;
 
     &:hover {
@@ -66,23 +66,23 @@ button {
   }
 
   &:hover {
-    background-color: #7b61ff;
+    background-color: #831843;
     transition: 0.4;
   }
 
   &-light {
-    color: #141414;
-    background-color: #7b61ff9c;
+    color: #0F172A;
+    background-color: #8318439c;
 
     &:hover {
-      background-color: #7b61ffc4;
+      background-color: #831843c4;
       transition: 0.4;
     }
   }
 }
 
 .secondary {
-  background-color: #141414;
+  background-color: #0F172A;
   color: white;
   transition: 0.4;
 
@@ -92,42 +92,42 @@ button {
         rgba(255, 255, 255, 0.2),
         rgba(255, 255, 255, 0.2)
       ),
-      #141414;
+      #0F172A;
     transition: 0.4;
   }
 
   &.outlined {
     transition: 0.4s;
-    color: #141414;
+    color: #0F172A;
     border: 1px solid rgba(0, 0, 0, 0.12);
     background: white;
   }
   &.link {
-    background-color: #141414;
+    background-color: #0F172A;
   }
 }
 
 .primary-light {
-  background-color: #7b61ff;
+  background-color: #831843;
   color: #ffffff;
   transition: 0.4;
 
   &.outlined {
-    border: 1px solid #7b61ff;
+    border: 1px solid #831843;
     background-color: white;
-    color: #141414;
+    color: #0F172A;
 
     &:hover {
       transition: 0.4;
-      border: 1px solid #7b61ff;
-      background-color: #7b61ff18;
-      color: #141414;
+      border: 1px solid #831843;
+      background-color: #83184318;
+      color: #0F172A;
     }
   }
 
   &.link {
     background-color: transparent;
-    color: #7b61ff;
+    color: #831843;
     transition: 0.5s;
 
     &:hover {
@@ -137,23 +137,23 @@ button {
   }
 
   &:hover {
-    background-color: #7b61ff;
+    background-color: #831843;
     transition: 0.4;
   }
 
   &-light {
-    color: #141414;
-    background-color: #7b61ff9c;
+    color: #0F172A;
+    background-color: #8318439c;
 
     &:hover {
-      background-color: #7b61ffc4;
+      background-color: #831843c4;
       transition: 0.4;
     }
   }
 }
 
 .secondary-light {
-  background-color: #141414;
+  background-color: #0F172A;
   color: white;
   transition: 0.4;
 
@@ -163,17 +163,17 @@ button {
         rgba(255, 255, 255, 0.2),
         rgba(255, 255, 255, 0.2)
       ),
-      #141414;
+      #0F172A;
     transition: 0.4;
   }
 
   &.outlined {
     transition: 0.4s;
-    color: #141414;
+    color: #0F172A;
     border: 1px solid rgba(0, 0, 0, 0.12);
     background: white;
   }
   &.link {
-    background-color: #141414;
+    background-color: #0F172A;
   }
 }

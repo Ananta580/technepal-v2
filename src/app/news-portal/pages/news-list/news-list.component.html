@@ -2,42 +2,36 @@
   <!-- Ads Section -->
   <app-my-ads></app-my-ads>
   <!-- Display Section -->
-  <div class="flex flex-col">
+  <div
+    *ngIf="blogs && blogs.length > 0; else emptyTemplate"
+    class="flex flex-col"
+  >
     <!-- Combined Card -->
     <div class="flex gap-6">
       <!-- Card -->
-      <div
-        *ngFor="let news of blogs | slice : 0 : 3"
-        class="flex flex-col gap-3 cursor-pointer py-5 w-2/6"
+      <app-card
+        *ngFor="let news of blogs | slice : 0 : 3; let i = index"
+        class="w-2/6"
         [routerLink]="'/news/' + news.combinedTitle"
+        [item]="news"
       >
-        <img [src]="news.coverImage" class="rounded-md" />
-        <h1 class="text-3xl font-semibold hover:text-pink-900">
-          {{ news.title }}
-        </h1>
-        <p>{{ news.subTitle }}</p>
-      </div>
+      </app-card>
     </div>
     <!-- Combined Card -->
     <div class="flex gap-6">
       <!-- Card -->
-      <div
-        *ngFor="let news of blogs | slice : 3 : 6"
-        class="flex flex-col gap-3 cursor-pointer py-5 w-2/6"
+      <app-card
+        *ngFor="let news of blogs | slice : 3 : 6; let i = index"
+        class="w-2/6"
+        [routerLink]="'/news/' + news.combinedTitle"
+        [item]="news"
       >
-        <img [src]="news.coverImage" class="rounded-md" />
-        <h1 class="text-3xl font-semibold hover:text-pink-900">
-          {{ news.title }}
-        </h1>
-        <p>{{ news.subTitle }}</p>
-      </div>
+      </app-card>
     </div>
   </div>
+  <ng-template #emptyTemplate>
+    <div class="h-80"></div>
+  </ng-template>
 </div>
 
-<div
-  *ngIf="isLoading"
-  class="flex w-screen h-screen items-center justify-center bg-[#0000001d] fixed top-0"
->
-  <app-spinner></app-spinner>
-</div>
+<app-spinner *ngIf="isLoading"></app-spinner>

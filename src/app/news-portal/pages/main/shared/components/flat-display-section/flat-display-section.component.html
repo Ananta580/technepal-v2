@@ -10,35 +10,31 @@
     <!-- Combined Card -->
     <div class="flex gap-6">
       <!-- Card -->
-      <div
-        *ngFor="let news of sectionNews | slice : 0 : 3"
-        class="flex flex-col gap-3 cursor-pointer py-5 w-2/6"
+      <app-card
+        *ngFor="let news of sectionNews | slice : 0 : 3; let i = index"
+        class="w-2/6"
         [routerLink]="'/news/' + news.combinedTitle"
+        [item]="news"
       >
-        <img [src]="news.coverImage" class="rounded-md" />
-        <h1 class="text-3xl font-semibold hover:text-pink-900">
-          {{ news.title }}
-        </h1>
-        <p>{{ news.subTitle }}</p>
-      </div>
+      </app-card>
     </div>
     <!-- Combined Card -->
     <div class="flex gap-6">
       <!-- Card -->
-      <div
-        *ngFor="let news of sectionNews | slice : 3 : 6"
-        class="flex flex-col gap-3 cursor-pointer py-5 w-2/6"
+      <app-card
+        *ngFor="let news of sectionNews | slice : 3 : 5; let i = index"
+        class="w-2/6"
+        [routerLink]="'/news/' + news.combinedTitle"
+        [item]="news"
       >
-        <img [src]="news.coverImage" class="rounded-md" />
-        <h1 class="text-3xl font-semibold hover:text-pink-900">
-          {{ news.title }}
-        </h1>
-        <p>{{ news.subTitle }}</p>
-      </div>
+      </app-card>
     </div>
   </div>
 </div>
 
-<div *ngIf="isLoading" class="flex items-center justify-center bg-[#0000001d]">
-  <app-spinner></app-spinner>
+<div
+  *ngIf="isLoading"
+  class="flex items-center justify-center bg-[#a4a2a21d] py-8"
+>
+  <app-spinner [fullWidth]="false" [size]="'small'"></app-spinner>
 </div>

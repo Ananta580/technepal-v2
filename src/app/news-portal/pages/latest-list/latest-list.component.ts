@@ -19,9 +19,11 @@ export class LatestListComponent implements OnInit {
   }
 
   loadBlog() {
+    this.isLoading = true;
     this.blogService.getLatestNews().subscribe({
       next: (res: ApiResonse<BlogBE[]>) => {
         this.blogs = res.data;
+        this.isLoading = false;
       },
       error: () => {
         this.isLoading = false;

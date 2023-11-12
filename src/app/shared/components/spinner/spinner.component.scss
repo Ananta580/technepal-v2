@@ -2,16 +2,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
     height: 100vh;
+    position: fixed;
+    top: 0px;
+    background-color: rgba(0, 98, 255, 0.081)
 }
 
 .spinner {
-    width: 80px;
-    height: 80px;
-    border: 6px solid #031222a7;
+    border: 6px solid #831843;
     border-top: 6px solid transparent;
     border-radius: 50%;
     animation: spin 1s infinite linear;
+    transition: 1s;
 }
 
 @keyframes spin {

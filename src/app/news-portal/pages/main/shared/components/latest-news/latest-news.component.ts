@@ -3,6 +3,7 @@ import { LatestNews } from '../../mockup';
 import { BlogService } from '../../services/blog.service';
 import { ApiResonse } from 'src/app/shared/model/api.response';
 import { BlogCardBE } from '../../models/blog';
+import { AUTHORS, Author } from 'src/app/shared/model/author.constant';
 
 @Component({
   selector: 'app-latest-news',
@@ -10,6 +11,8 @@ import { BlogCardBE } from '../../models/blog';
 })
 export class LatestNewsComponent {
   latestNews: BlogCardBE[] = [];
+
+  authors = AUTHORS;
 
   constructor(private blogService: BlogService) {}
 
@@ -23,5 +26,9 @@ export class LatestNewsComponent {
         this.latestNews = res.data;
       },
     });
+  }
+
+  getAuthor(id: string) {
+    return this.authors.find((x) => x.id === id);
   }
 }

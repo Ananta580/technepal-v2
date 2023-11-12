@@ -3,6 +3,7 @@ import { News } from '../../models/news.model';
 import { GamingNews, LaptopNews, PhoneNews } from '../../mockup';
 import { BlogService } from '../../services/blog.service';
 import { ApiResonse } from 'src/app/shared/model/api.response';
+import { BlogCardBE } from '../../models/blog';
 
 @Component({
   selector: 'app-flat-display-section',
@@ -12,7 +13,7 @@ export class FlatDisplaySectionComponent implements OnInit {
   @Input() sectionName = '';
   @Input() sectionCode = '';
 
-  sectionNews: News[] = [];
+  sectionNews: BlogCardBE[] = [];
 
   isLoading = false;
   constructor(private blogService: BlogService) {}
@@ -24,7 +25,7 @@ export class FlatDisplaySectionComponent implements OnInit {
   getBlogsByCategory() {
     this.isLoading = true;
     this.blogService.getBlogByCategoryId(this.sectionCode).subscribe({
-      next: (res: ApiResonse<News[]>) => {
+      next: (res: ApiResonse<BlogCardBE[]>) => {
         this.isLoading = false;
         this.sectionNews = res.data;
       },

@@ -17,6 +17,7 @@ export class NewsDetailComponent implements OnInit {
   combinedTitle = '';
 
   authors = AUTHORS;
+
   author?: Author;
 
   isLoading = false;
@@ -29,7 +30,7 @@ export class NewsDetailComponent implements OnInit {
         'Fresh speculation adds to weight of existing rumors. Apple’s MacBook Pro with OLED will turn up in 2026, to be followed by a MacBook Air, we’re told.',
       coverImage:
         'https://technepal.azurewebsites.net/blog/f5759b6f-e3a6-4e39-86e6-5722bd7ec89d.webp',
-      authorId: 'bbd01ef-a71d-458f-8723-0e30f0d3326b',
+      authorId: '1bbd01ef-a71d-458f-8723-0e30f0d3326b',
       publishedDate: new Date().toString(),
       viewCount: 10,
     },
@@ -40,7 +41,7 @@ export class NewsDetailComponent implements OnInit {
         'Fresh speculation adds to weight of existing rumors. Apple’s MacBook Pro with OLED will turn up in 2026, to be followed by a MacBook Air, we’re told.',
       coverImage:
         'https://technepal.azurewebsites.net/blog/f5759b6f-e3a6-4e39-86e6-5722bd7ec89d.webp',
-      authorId: 'bbd01ef-a71d-458f-8723-0e30f0d3326b',
+      authorId: '1bbd01ef-a71d-458f-8723-0e30f0d3326b',
       publishedDate: new Date().toString(),
       viewCount: 10,
     },
@@ -51,7 +52,7 @@ export class NewsDetailComponent implements OnInit {
         'Fresh speculation adds to weight of existing rumors. Apple’s MacBook Pro with OLED will turn up in 2026, to be followed by a MacBook Air, we’re told.',
       coverImage:
         'https://technepal.azurewebsites.net/blog/f5759b6f-e3a6-4e39-86e6-5722bd7ec89d.webp',
-      authorId: 'bbd01ef-a71d-458f-8723-0e30f0d3326b',
+      authorId: '1bbd01ef-a71d-458f-8723-0e30f0d3326b',
       publishedDate: new Date().toString(),
       viewCount: 10,
     },
@@ -62,7 +63,7 @@ export class NewsDetailComponent implements OnInit {
         'Fresh speculation adds to weight of existing rumors. Apple’s MacBook Pro with OLED will turn up in 2026, to be followed by a MacBook Air, we’re told.',
       coverImage:
         'https://technepal.azurewebsites.net/blog/f5759b6f-e3a6-4e39-86e6-5722bd7ec89d.webp',
-      authorId: 'bbd01ef-a71d-458f-8723-0e30f0d3326b',
+      authorId: '1bbd01ef-a71d-458f-8723-0e30f0d3326b',
       publishedDate: new Date().toString(),
       viewCount: 10,
     },
@@ -93,5 +94,9 @@ export class NewsDetailComponent implements OnInit {
           this.isLoading = false;
         },
       });
+  }
+
+  getAuthor(id: string) {
+    return this.authors.find((x) => x.id === id);
   }
 }

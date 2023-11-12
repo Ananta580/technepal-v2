@@ -1,5 +1,5 @@
 <div class="p-6 flex flex-col gap-6">
-  <div class="flex justify-between items-center">
+  <div class="flex justify-between items-top mb-8">
     <div class="flex flex-col">
       <h4 class="text-lg font-semibold">Blogs/News List</h4>
       <span>Little more description on this topic is here</span>
@@ -8,7 +8,7 @@
     <div>
       <button
         routerLink="create-edit"
-        class="bg-slate-700 px-5 py-2 font-semibold text-white"
+        class="bg-pink-900 px-5 py-2 font-semibold text-white rounded"
       >
         Add New Blog
       </button>
@@ -19,9 +19,13 @@
   <div class="grid grid-cols-2 gap-6">
     <div
       *ngFor="let news of blogs; let i = index"
-      class="flex gap-3 cursor-pointer p-5 relative border-2 border-gray-100 rounded-md hover:bg-slate-100"
+      class="flex gap-3 cursor-pointer p-5 relative border shadow-sm rounded-md border-slate-200"
     >
-      <img width="50%" class="object-cover h-60" [src]="news.coverImage" />
+      <img
+        width="50%"
+        class="object-cover h-60 bg-pink-50 rounded-md"
+        [src]="news.coverImage"
+      />
       <div class="flex flex-col gap-2">
         <h1 class="text-3xl font-semibold hover:text-pink-900 line-clamp-3">
           {{ news.title }}

@@ -1,7 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { BlogCardBE } from 'src/app/news-admin-portal/shared/model/blog';
+import { AUTHORS } from '../../model/author.constant';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
 })
-export class CardComponent {}
+export class CardComponent {
+  @Input() item?: BlogCardBE;
+
+  @Input() size: 'big' | 'small' = 'big';
+
+  authors = AUTHORS;
+
+  getAuthor(id: string) {
+    return this.authors.find((x) => x.id === id);
+  }
+}

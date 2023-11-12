@@ -1,1 +1,43 @@
-<p>card works!</p>
+<!-- Big card -->
+<div
+  *ngIf="item && size === 'big'"
+  class="flex flex-col gap-3 cursor-pointer py-5 w-full"
+>
+  <img [src]="item.coverImage" class="rounded-md" />
+  <h1 class="text-3xl font-semibold hover:text-pink-900 line-clamp-3">
+    {{ item.title }}
+  </h1>
+  <p class="line-clamp-4">{{ item.subTitle }}</p>
+
+  <div class="flex justify-between">
+    <p class="text-xs font-medium text-blue-800 flex gap-2 items-center">
+      <span class="material-symbols-outlined text-sm">signature</span
+      >{{ getAuthor(item.authorId)?.name }}
+    </p>
+    <p class="text-xs font-medium text-gray-400">
+      {{ item.publishedDate | date : "MMMM d, y | h:mm a" }}
+    </p>
+  </div>
+</div>
+
+<!-- Small card -->
+<div *ngIf="item && size === 'small'" class="flex gap-3 cursor-pointer">
+  <img [src]="item.coverImage" class="object-cover h-20 w-32 rounded-md" />
+  <div class="flex flex-col justify-between h-20">
+    <h1
+      [title]="item.title"
+      class="text-sm font-medium hover:text-pink-800 text-ellipsis line-clamp-2"
+    >
+      {{ item.title }}
+    </h1>
+    <div class="flex flex-col">
+      <p class="text-xs font-medium text-blue-800 flex gap-2 items-center">
+        <span class="material-symbols-outlined text-sm">signature</span>
+        {{ getAuthor(item.authorId)?.name }}
+      </p>
+      <p class="text-xs font-medium text-gray-400">
+        {{ item.publishedDate | date : "MMMM d, y | h:mm a" }}
+      </p>
+    </div>
+  </div>
+</div>
