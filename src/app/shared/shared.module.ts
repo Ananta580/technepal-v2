@@ -9,6 +9,7 @@ import { SelectComponent } from './components/select/select.component';
 import { PreviewComponent } from './components/preview/preview.component';
 import { NoSanitizePipe } from './pipe/nosanitize.pipe';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { MyAdsComponent } from './components/my-ads/my-ads.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     PreviewComponent,
     NoSanitizePipe,
     SpinnerComponent,
+    MyAdsComponent,
   ],
   imports: [CommonModule, OverlayModule],
   providers: [],
@@ -32,6 +34,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     CardComponent,
     PreviewComponent,
     NoSanitizePipe,
+    MyAdsComponent,
   ],
 })
 export class SharedModule {}
