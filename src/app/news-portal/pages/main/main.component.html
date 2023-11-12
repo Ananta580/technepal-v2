@@ -1,4 +1,4 @@
-<div class="w-full flex justify-center px-3">
+<div class="w-full flex justify-center">
   <!-- Main Section -->
   <div class="flex flex-col mx-auto w-[70%] max-xl:w-[90%] py-12 gap-8">
     <!-- Ads Section -->
@@ -8,7 +8,7 @@
     <!-- Navigate Trending Section -->
     <div class="bg-gray-200 flex w-full">
       <div
-        class="flex items-center justify-center text-white w-36 bg-gradient-to-r from-red-500 to-red-400"
+        class="flex items-center justify-center font-medium text-white w-36 bg-gradient-to-r from-pink-800 to-pink-900"
       >
         HOT TOPICS
       </div>
@@ -16,7 +16,7 @@
       <div class="flex items-center w-full h-full overflow-x-auto scrollbar">
         <button
           *ngFor="let hotTopic of hotTopicList"
-          class="px-3 py-1 flex-none hover:text-blue-500"
+          class="px-3 py-2 font-medium flex-none hover:text-pink-800"
           (click)="redirectToHotTopicList(hotTopic.id)"
         >
           {{ hotTopic.name }}
@@ -24,7 +24,7 @@
       </div>
     </div>
     <!-- Display Section -->
-    <div class="flex flex-col mt-16 gap-6">
+    <div class="flex flex-col mt-5 gap-6">
       <!-- HOT Topic & Latest News  -->
       <div class="flex gap-6">
         <app-hot-topic class="w-4/6"></app-hot-topic>

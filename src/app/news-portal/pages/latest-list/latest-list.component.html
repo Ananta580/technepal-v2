@@ -13,8 +13,8 @@
         class="flex flex-col gap-3 cursor-pointer py-5 w-2/6"
         [routerLink]="'/news/' + news.combinedTitle"
       >
-        <img [src]="news.coverImage" />
-        <h1 class="text-3xl font-semibold hover:text-blue-500">
+        <img [src]="news.coverImage" class="rounded-md" />
+        <h1 class="text-3xl font-semibold hover:text-pink-900">
           {{ news.title }}
         </h1>
         <p>{{ news.subTitle }}</p>
@@ -27,8 +27,8 @@
         *ngFor="let news of blogs | slice : 3 : 6"
         class="flex flex-col gap-3 cursor-pointer py-5 w-2/6"
       >
-        <img [src]="news.coverImage" />
-        <h1 class="text-3xl font-semibold hover:text-blue-500">
+        <img [src]="news.coverImage" class="rounded-md" />
+        <h1 class="text-3xl font-semibold hover:text-pink-900">
           {{ news.title }}
         </h1>
         <p>{{ news.subTitle }}</p>

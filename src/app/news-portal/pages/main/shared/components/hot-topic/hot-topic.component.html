@@ -1,7 +1,7 @@
 <div>
   <!-- Main Title -->
   <div
-    class="flex justify-center items-center w-full shadow border-t bg-slate-200 py-3 font-bold text-slate-800"
+    class="flex justify-center items-center w-full shadow-md bg-gradient-to-b from-transparent to-blue-100 py-3 font-bold text-slate-800 rounded-lg"
   >
     HOT NEWS
   </div>
@@ -12,8 +12,8 @@
       class="flex flex-col gap-3 cursor-pointer w-full py-5"
       [routerLink]="'/news/' + hotNews[0].combinedTitle"
     >
-      <img [src]="hotNews[0].coverImage" />
-      <h1 class="text-3xl font-semibold hover:text-blue-500">
+      <img [src]="hotNews[0].coverImage" class="rounded-md" />
+      <h1 class="text-3xl font-semibold hover:text-pink-900">
         {{ hotNews[0].title }}
       </h1>
       <p>{{ hotNews[0].subTitle }}</p>
@@ -27,8 +27,8 @@
         class="flex flex-col gap-3 cursor-pointer py-5 w-3/6"
         [routerLink]="'/news/' + news.combinedTitle"
       >
-        <img [src]="news.coverImage" />
-        <h1 class="text-3xl font-semibold hover:text-blue-500">
+        <img [src]="news.coverImage" class="rounded-md" />
+        <h1 class="text-3xl font-semibold hover:text-pink-900">
           {{ news.title }}
         </h1>
         <p>{{ news.subTitle }}</p>
@@ -43,8 +43,8 @@
         class="flex flex-col gap-3 cursor-pointer py-5 w-3/6"
         [routerLink]="'/news/' + news.combinedTitle"
       >
-        <img [src]="news.coverImage" />
-        <h1 class="text-3xl font-semibold hover:text-blue-500">
+        <img [src]="news.coverImage" class="rounded-md" />
+        <h1 class="text-3xl font-semibold hover:text-pink-900">
           {{ news.title }}
         </h1>
         <p>{{ news.subTitle }}</p>

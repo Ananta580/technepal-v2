@@ -1,7 +1,7 @@
 <div *ngIf="sectionNews.length > 0">
   <!-- Main Title -->
   <div
-    class="flex justify-center items-center w-full shadow border-t bg-slate-200 py-3 font-bold text-slate-800"
+    class="flex justify-center items-center w-full shadow-md bg-gradient-to-b from-transparent to-blue-100 py-3 font-bold text-slate-800 rounded-lg"
   >
     {{ sectionName | uppercase }}
   </div>
@@ -15,8 +15,8 @@
         class="flex flex-col gap-3 cursor-pointer py-5 w-2/6"
         [routerLink]="'/news/' + news.combinedTitle"
       >
-        <img [src]="news.coverImage" />
-        <h1 class="text-3xl font-semibold hover:text-blue-500">
+        <img [src]="news.coverImage" class="rounded-md" />
+        <h1 class="text-3xl font-semibold hover:text-pink-900">
           {{ news.title }}
         </h1>
         <p>{{ news.subTitle }}</p>
@@ -29,8 +29,8 @@
         *ngFor="let news of sectionNews | slice : 3 : 6"
         class="flex flex-col gap-3 cursor-pointer py-5 w-2/6"
       >
-        <img [src]="news.coverImage" />
-        <h1 class="text-3xl font-semibold hover:text-blue-500">
+        <img [src]="news.coverImage" class="rounded-md" />
+        <h1 class="text-3xl font-semibold hover:text-pink-900">
           {{ news.title }}
         </h1>
         <p>{{ news.subTitle }}</p>

@@ -4,7 +4,7 @@ import { BlogService } from '../main/shared/services/blog.service';
 import { ApiResonse } from 'src/app/shared/model/api.response';
 
 @Component({
-  selector: 'app-popular-list',
+  selector: 'app-latest-list',
   templateUrl: './latest-list.component.html',
 })
 export class LatestListComponent implements OnInit {

@@ -1,7 +1,7 @@
 <div>
   <!-- Main Title -->
   <div
-    class="flex justify-center items-center w-full shadow border-t bg-slate-200 py-3 font-bold text-slate-800"
+    class="flex justify-center items-center w-full shadow-md bg-gradient-to-b from-transparent to-blue-100 py-3 font-bold text-slate-800 rounded-lg"
   >
     LATEST NEWS
   </div>
@@ -13,8 +13,12 @@
       class="flex gap-3 cursor-pointer py-3 border-b items-start first:py-5 last:border-none"
       [routerLink]="'/news/' + news.combinedTitle"
     >
-      <img [src]="news.coverImage" width="120px" class="object-contain" />
-      <h1 class="text-lg font-normal hover:text-blue-500">
+      <img
+        [src]="news.coverImage"
+        width="120px"
+        class="object-contain rounded-md"
+      />
+      <h1 class="text-base font-normal hover:text-pink-800">
         {{ news.title }}
       </h1>
     </div>

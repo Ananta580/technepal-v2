@@ -1,43 +1,29 @@
-<div class="w-full flex justify-center items-center bg-slate-700 h-16 px-3">
+<div class="w-full flex justify-center items-center bg-white h-16">
   <!-- Main Section -->
   <div class="flex w-[70%] max-xl:w-[90%] justify-between items-center">
     <!-- Logo & Slogan Section -->
-    <div class="flex gap-4 items-center mt-2">
-      <img width="150px" src="assets/logo.svg" [routerLink]="'/news'" />
-      <p class="text-gray-300 font-normal font-roboto">Your tech book</p>
+    <div class="flex gap-4 items-start mt-2 cursor-pointer">
+      <img class="invert" width="120px" src="assets/logo.svg" [routerLink]="'/'" />
+      <p class="bg-[rgb(15,23,42)] text-white rounded-full text-[10px] px-2 py-1 font-semibold">NEWS</p>
     </div>
     <!-- Feeds and Search Icon -->
     <div class="flex gap-6 items-center">
-      <!-- Language Selector -->
-      <div
-        class="w-8 h-8 flex justify-center items-center bg-gray-400 font-semibold cursor-pointer"
-      >
-        EN
-      </div>
       <!-- Social Media -->
       <div class="flex gap-2 items-center">
-        <div class="w-8 h-8 flex justify-center items-center cursor-pointer">
-          <img width="70%" src="assets/facebook.svg" />
+        <div class="w-8 h-8 invert flex justify-center items-center cursor-pointer">
+          <img width="50%" src="assets/professional/facebook.svg" />
         </div>
-        <div class="w-8 h-8 flex justify-center items-center cursor-pointer">
-          <img width="70%" src="assets/linkedin.svg" />
+        <div class="w-8 h-8 invert flex justify-center items-center cursor-pointer">
+          <img width="50%" src="assets/professional/linkedin.svg" />
         </div>
-        <div class="w-8 h-8 flex justify-center items-center cursor-pointer">
-          <img width="70%" src="assets/twitter.svg" />
+        <div class="w-8 h-8 invert flex justify-center items-center cursor-pointer">
+          <img width="50%" src="assets/professional/twitter.svg" />
         </div>
       </div>
       <!-- Search Icon -->
       <div class="flex gap-2 px-2 items-center bg-gray-300 rounded-sm h-8">
-        <input
-          [(ngModel)]="searchString"
-          class="outline-none bg-transparent"
-          placeholder="Search"
-        />
-        <span
-          (click)="search()"
-          class="material-icons text-gray-500 cursor-pointer"
-          >search</span
-        >
+        <input [(ngModel)]="searchString" class="outline-none bg-transparent" placeholder="Search" />
+        <span (click)="search()" class="material-icons text-gray-500 cursor-pointer">search</span>
       </div>
     </div>
   </div>

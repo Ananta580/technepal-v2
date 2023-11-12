@@ -41,5 +41,6 @@ export class NavBarComponent {
 
   gotoPage(page: 'popular' | 'latest') {
     this.router.navigateByUrl(`news/${page}`);
+    this.selectedCategoryId = '';
   }
 }

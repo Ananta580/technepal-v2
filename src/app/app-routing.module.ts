@@ -34,6 +34,13 @@ const routes: Routes = [
         (m) => m.LearnPortalModule
       ),
   },
+  {
+    path: 'terms-conditions',
+    loadComponent: () =>
+      import(
+        './miscellaneous/terms-and-condition/terms-and-condition.component'
+      ).then((m) => m.TermsAndConditionComponent),
+  },
 ];
 
 @NgModule({
