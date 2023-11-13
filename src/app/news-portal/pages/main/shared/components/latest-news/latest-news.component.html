@@ -11,7 +11,7 @@
     <app-card
       size="small"
       class="border-b first:py-5 last:border-none py-3"
-      *ngFor="let news of latestNews"
+      *ngFor="let news of latestNews | slice : 0 : 15"
       [routerLink]="'/news/' + news.combinedTitle"
       [item]="news"
     >
