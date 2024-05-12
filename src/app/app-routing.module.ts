@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AuthGuardService } from './shared/Guard/AuthGuard';
 
 const routes: Routes = [
@@ -22,7 +22,7 @@ const routes: Routes = [
   {
     path: 'news-admin',
     loadChildren: () =>
-      import('./news-admin-portal/news-admin-portal.module').then(
+      import('./admin/news-admin-portal/news-admin-portal.module').then(
         (m) => m.NewsAdminPortalModule
       ),
     canActivate: [AuthGuardService],

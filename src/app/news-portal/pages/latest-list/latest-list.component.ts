@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogBE } from 'src/app/news-admin-portal/shared/model/blog';
+import { BlogBE } from 'src/app/admin/news-admin-portal/shared/model/blog';
 import { BlogService } from '../main/shared/services/blog.service';
 import { ApiResonse } from 'src/app/shared/model/api.response';
 

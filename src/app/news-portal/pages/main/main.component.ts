@@ -3,8 +3,8 @@ import { BlogService } from './shared/services/blog.service';
 import { CategoryService } from './shared/services/category.service';
 import { ApiResonse } from 'src/app/shared/model/api.response';
 import { CategoryBE } from './shared/models/category';
-import { HotTopicService } from 'src/app/news-admin-portal/shared/services/hot-topic.service';
-import { HotTopicBE } from 'src/app/news-admin-portal/shared/model/hot-topic';
+import { HotTopicService } from 'src/app/admin/news-admin-portal/shared/services/hot-topic.service';
+import { HotTopicBE } from 'src/app/admin/news-admin-portal/shared/model/hot-topic';
 import { Router } from '@angular/router';
 
 @Component({

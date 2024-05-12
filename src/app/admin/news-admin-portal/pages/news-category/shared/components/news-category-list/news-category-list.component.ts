@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryBE } from 'src/app/news-admin-portal/shared/model/category';
-import { CategoryService } from 'src/app/news-admin-portal/shared/services/category.service';
+import { CategoryBE } from 'src/app/admin/news-admin-portal/shared/model/category';
+import { CategoryService } from 'src/app/admin/news-admin-portal/shared/services/category.service';
 import { ApiResonse } from 'src/app/shared/model/api.response';
 
 @Component({

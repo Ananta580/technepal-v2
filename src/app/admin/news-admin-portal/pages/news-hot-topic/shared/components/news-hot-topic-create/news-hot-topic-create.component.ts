@@ -7,8 +7,8 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { HotTopicBE } from 'src/app/news-admin-portal/shared/model/hot-topic';
-import { HotTopicService } from 'src/app/news-admin-portal/shared/services/hot-topic.service';
+import { HotTopicBE } from 'src/app/admin/news-admin-portal/shared/model/hot-topic';
+import { HotTopicService } from 'src/app/admin/news-admin-portal/shared/services/hot-topic.service';
 import { ApiResonse } from 'src/app/shared/model/api.response';
 
 @Component({

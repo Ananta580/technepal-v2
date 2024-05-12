@@ -7,8 +7,8 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CategoryBE } from 'src/app/news-admin-portal/shared/model/category';
-import { CategoryService } from 'src/app/news-admin-portal/shared/services/category.service';
+import { CategoryBE } from 'src/app/admin/news-admin-portal/shared/model/category';
+import { CategoryService } from 'src/app/admin/news-admin-portal/shared/services/category.service';
 import { ApiResonse } from 'src/app/shared/model/api.response';
 
 @Component({

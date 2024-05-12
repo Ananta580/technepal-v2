@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { BlogCardBE } from 'src/app/news-admin-portal/shared/model/blog';
+import { BlogCardBE } from 'src/app/admin/news-admin-portal/shared/model/blog';
 import { AUTHORS } from '../../model/author.constant';
 
 @Component({
