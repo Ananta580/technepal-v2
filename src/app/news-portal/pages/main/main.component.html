@@ -6,17 +6,13 @@
     <!-- Navigate Trending Section -->
     <div class="bg-gray-200 flex w-full">
       <div
-        class="flex items-center justify-center font-medium text-white w-36 bg-gradient-to-r from-pink-800 to-pink-900"
-      >
+        class="flex items-center justify-center font-medium text-white w-36 bg-gradient-to-r from-pink-800 to-pink-900">
         HOT TOPICS
       </div>
       <!-- Scroll bar with style -->
       <div class="flex items-center w-full h-full overflow-x-auto scrollbar">
-        <button
-          *ngFor="let hotTopic of hotTopicList"
-          class="px-3 py-2 font-medium flex-none hover:text-pink-800"
-          (click)="redirectToHotTopicList(hotTopic.id)"
-        >
+        <button *ngFor="let hotTopic of hotTopicList" class="px-3 py-2 font-medium flex-none hover:text-pink-800"
+          (click)="redirectToHotTopicList(hotTopic.id)">
           {{ hotTopic.name }}
         </button>
       </div>
@@ -30,11 +26,8 @@
       </div>
 
       <!-- Category Section -->
-      <app-flat-display-section
-        *ngFor="let category of categoryList"
-        [sectionName]="category.name | uppercase"
-        [sectionCode]="category.id"
-      ></app-flat-display-section>
+      <app-flat-display-section *ngFor="let category of categoryList" [sectionName]="category.name | uppercase"
+        [sectionCode]="category.id"></app-flat-display-section>
     </div>
   </div>
 </div>

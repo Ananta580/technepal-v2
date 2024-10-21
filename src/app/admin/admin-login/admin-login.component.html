@@ -1,25 +1,9 @@
 <div class="flex w-screen h-screen justify-center items-center">
-  <div
-    [formGroup]="loginForm"
-    class="w-96 bg-slate-50 gap-5 flex flex-col justify-center items-center p-8 rounded-md"
-  >
-    <app-input
-      formControlName="UserName"
-      class="w-full"
-      placeholder="User Name"
-    ></app-input>
-    <app-input
-      formControlName="Password"
-      class="w-full"
-      placeholder="Password"
-    ></app-input>
+  <div [formGroup]="loginForm" class="w-96 bg-slate-50 gap-5 flex flex-col justify-center items-center p-8 rounded-md">
+    <app-input formControlName="UserName" class="w-full" placeholder="User Name"></app-input>
+    <app-input formControlName="Password" class="w-full" placeholder="Password"></app-input>
 
-    <app-button
-      (click)="login()"
-      class="flex w-full items-center justify-center"
-      paddings="px-4 py-2"
-      [fullWidth]="true"
-      >Admin Login</app-button
-    >
+    <app-button (click)="login()" class="flex w-full items-center justify-center" paddings="px-4 py-2"
+      [fullWidth]="true">Login</app-button>
   </div>
 </div>
