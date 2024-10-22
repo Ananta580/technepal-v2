@@ -10,16 +10,19 @@
         <h1 class="text-3xl font-semibold text-gray-600">
           {{ blog?.title }}
         </h1>
-        <div class="flex gap-2 items-center">
-          Published By
-          <div class="flex gap-2 items-center">
-            <div class="flex h-7 w-7 object-cover rounded-full">
-              <img class="rounded-full" [src]="author?.profileUrl" />
+        <div class="flex gap-6 text-sm items-center max-md:flex-wrap">
+          <div class="flex gap-2 items-center">Published By :
+            <div class="flex gap-2 items-center">
+              <div class="flex h-7 w-7 object-cover rounded-full">
+                <img class="rounded-full" [src]="author?.profileUrl" />
+              </div>
+              <span class="text-blue-500"> {{ author?.name }}</span>
             </div>
-            <span class="text-blue-500"> {{ author?.name }}</span>
           </div>
-          | Published On
-          <span class="text-blue-500">{{ blog?.publishedDate | date }}</span>
+          <div class="flex gap-2 items-center">
+            Published On :
+            <span class="text-blue-500">{{ blog?.publishedDate | date }}</span>
+          </div>
         </div>
 
         <p class="text-gray-500">{{ blog?.subTitle }}</p>
