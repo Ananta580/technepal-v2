@@ -1,53 +1,31 @@
-<div
-  class="w-full flex justify-center items-center bg-slate-900 h-11 sticky top-0"
->
+<div class="w-full flex justify-center items-center bg-slate-900 h-11 sticky top-0">
   <!-- Main Section -->
   <div class="flex h-full w-[70%] max-xl:w-[90%] justify-between items-center">
     <!-- Left Section -->
     <div class="h-full flex">
-      <div
-        [routerLink]="'/news'"
-        [routerLinkActive]="'!bg-pink-900 !border-pink-700'"
+      <div [routerLink]="'/news'" [routerLinkActive]="'!bg-pink-900 !border-pink-700'"
         [routerLinkActiveOptions]="{ exact: true }"
-        class="flex h-full justify-center items-center text-white bg-slate-600 px-3 border-t border-transparent hover:bg-slate-700 border-slate-500 cursor-pointer"
-      >
+        class="flex h-full justify-center items-center text-white bg-slate-600 px-3 border-t border-transparent hover:bg-slate-700 border-slate-500 cursor-pointer">
         <span class="material-icons">cottage</span>
       </div>
 
-      <div
-        [routerLink]="'/news/popular'"
-        [routerLinkActive]="'!bg-pink-900 !border-pink-700'"
-        class="flex h-full font-poppins justify-center items-center text-white px-4 border-t border-transparent hover:bg-slate-700 hover:border-slate-500 cursor-pointer"
-      >
+      <div [routerLink]="'/news/popular'" [routerLinkActive]="'!bg-pink-900 !border-pink-700'"
+        class="flex h-full font-poppins justify-center items-center text-white px-4 border-t border-transparent hover:bg-slate-700 hover:border-slate-500 cursor-pointer">
         Popular
       </div>
 
-      <div
-        [routerLink]="'/news/latest'"
-        [routerLinkActive]="'!bg-pink-900 !border-pink-700'"
-        class="flex h-full font-poppins justify-center items-center text-white px-4 border-t border-transparent hover:bg-slate-700 hover:border-slate-500 cursor-pointer"
-      >
+      <div [routerLink]="'/news/latest'" [routerLinkActive]="'!bg-pink-900 !border-pink-700'"
+        class="flex h-full font-poppins justify-center items-center text-white px-4 border-t border-transparent hover:bg-slate-700 hover:border-slate-500 cursor-pointer">
         Latest
       </div>
 
-      <div
-        *ngFor="let category of categoryList"
-        [routerLink]="'/news/category/' + category.id"
+      <div *ngFor="let category of categoryList" [routerLink]="'/news/category/' + category.id"
         [routerLinkActive]="'!bg-pink-900 !border-pink-700'"
-        class="flex h-full font-poppins justify-center items-center px-4 border-t border-transparent hover:bg-slate-700 hover:border-slate-500 text-white cursor-pointer"
-      >
+        class="flex h-full font-poppins justify-center items-center px-4 border-t border-transparent hover:bg-slate-700 hover:border-slate-500 text-white cursor-pointer">
         {{ category.name }}
       </div>
     </div>
 
-    <!-- Right Section -->
-    <div class="h-full flex">
-      <div
-        [routerLink]="'/learn'"
-        class="bg-slate-600 cursor-pointer font-semibold gap-3 text-white flex h-full justify-center items-center px-4"
-      >
-        LEARN <span class="material-icons"> school </span>
-      </div>
-    </div>
+
   </div>
 </div>

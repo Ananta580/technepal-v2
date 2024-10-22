@@ -1,27 +1,30 @@
-<div class="w-full flex justify-center items-center bg-white h-16">
+<div class="w-full flex justify-center items-center bg-gradient-to-r from-blue-800 to-pink-800 h-16">
   <!-- Main Section -->
   <div class="flex w-[70%] max-xl:w-[90%] justify-between items-center">
     <!-- Logo & Slogan Section -->
     <div class="flex gap-4 items-start mt-2 cursor-pointer">
-      <img class="invert" width="120px" src="assets/logo.svg" [routerLink]="'/'" />
-      <p class="bg-[rgb(15,23,42)] text-white rounded-full text-[10px] px-2 py-1 font-semibold">NEWS</p>
+      <img class="" width="120px" src="assets/logo.svg" [routerLink]="'/'" />
+      <p class="bg-[rgb(15,23,42)] text-white rounded-full text-sm px-4 py-1 font-semibold">NEWS</p>
     </div>
     <!-- Feeds and Search Icon -->
-    <div class="flex gap-6 items-center">
+    <div class="flex flex-row-reverse gap-6 items-center">
       <!-- Social Media -->
       <div class="flex gap-2 items-center">
-        <div class="w-8 h-8 flex justify-center items-center cursor-pointer">
-          <img class="h-5" src="assets/professional/github.svg" />
-        </div>
-        <a href="https://linkedin.com/in/ananta580" class="w-8 h-8 flex justify-center items-center cursor-pointer">
-          <img class="h-6" src="assets/professional/linkedin.svg" />
+        <a href="https://github.com/ananta580"
+          class="w-8 h-8 opacity-75  hover:opacity-100 bg-white rounded-md flex justify-center items-center cursor-pointer">
+          <img class="h-4" src="assets/professional/github.svg" />
         </a>
-        <div class="w-10 h-12 flex justify-center items-center cursor-pointer">
-          <img class="h-6" src="assets/professional/upwork.svg" />
-        </div>
+        <a href="https://linkedin.com/in/ananta580"
+          class="w-8 h-8 opacity-75  hover:opacity-100 bg-white rounded-md flex justify-center items-center cursor-pointer">
+          <img class="h-4" src="assets/professional/linkedin.svg" />
+        </a>
+        <a href="https://www.upwork.com/freelancers/anantap"
+          class="w-8 h-8 opacity-75  hover:opacity-100 bg-white rounded-md flex justify-center items-center cursor-pointer">
+          <img class="h-5" src="assets/professional/upwork.svg" />
+        </a>
       </div>
       <!-- Search Icon -->
-      <div class="flex gap-2 px-2 items-center bg-gray-300 rounded-sm h-8">
+      <div class="flex gap-2 px-6 items-center bg-gray-200 rounded-full h-10">
         <input [(ngModel)]="searchString" class="outline-none bg-transparent" placeholder="Search" />
         <span (click)="search()" class="material-icons text-gray-500 cursor-pointer">search</span>
       </div>
