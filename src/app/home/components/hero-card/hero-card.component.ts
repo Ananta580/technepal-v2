@@ -10,6 +10,7 @@ export class HeroCardComponent {
   @Input() color: string = '';
   @Input() button: string = '';
   @Input() icon: string = '';
+  @Input() title: string = '';
   @Input() description: string = '';
   @Input() tags: string[] = [];
   @Input() url: string = '';

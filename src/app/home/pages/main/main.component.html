@@ -1,5 +1,5 @@
-<div>
-  <div class="flex w-full h-screen gradient-container relative">
+<div class="relative">
+  <div class="absolute -mt-4 -z-10 flex w-full h-screen gradient-container">
     <span class="circle circle-1"></span>
     <span class="circle circle-2"></span>
     <span class="circle circle-3"></span>
@@ -9,180 +9,184 @@
     <span class="circle circle-7"></span>
     <span class="circle circle-8"></span>
     <span class="circle circle-9"></span>
-    <div class="w-[70%] mx-auto">
-      <app-top-bar class="w-full"></app-top-bar>
+  </div>
 
-      <!-- Hero Section -->
-      <div class="flex w-[60%]  my-20 flex-col">
-        <h1 class="text-4xl font-semibold">A Platform for Tech Enthusiasts</h1>
-        <h2 class="text-4xl font-light leading-10 mt-3">
-          Developers & Designers
-        </h2>
+  <div class="w-[70%] mx-auto">
+    <app-top-bar class="w-full"></app-top-bar>
 
-        <p class="text-justify font-light py-10 pb-14 text-xl text-gray-600">
-          Developed by Ananta Poudel, Tech Nepal is your trusted platform for up-to-date technology news. Here, you can
-          learn a variety of programming languages and actively collaborate with the tech community.
-        </p>
+    <!-- Hero Section -->
+    <div class="flex w-[60%] my-32 flex-col">
+      <h1 class="text-4xl font-semibold">A Platform for Tech Enthusiasts</h1>
+      <h2 class="text-4xl font-light leading-10 mt-3">
+        Developers & Designers
+      </h2>
 
-        <!-- Buttons -->
-        <div class="flex gap-5">
-          <div
-            class="p-3 px-5 font-medium bg-black transition-all duration-300 hover:bg-gray-800 z-10 text-white rounded-md flex items-center gap-3 cursor-pointer">
-            <span class="material-symbols-outlined"> globe </span>Ananta Poudel
-          </div>
+      <p class="text-justify font-light py-10 pb-14 text-xl text-gray-600">
+        Developed by Ananta Poudel, Tech Nepal is your trusted platform for up-to-date technology news. Here, you can
+        learn a variety of programming languages and actively collaborate with the tech community.
+      </p>
 
-          <div
-            class="p-3 px-5 bg-white transition-all duration-300 hover:bg-[#ffffffca] font-semibold rounded-md flex items-end gap-3 cursor-pointer">
-            <img class="h-6" src="../../../../assets/professional/linkedin.svg" />
-          </div>
+      <!-- Buttons -->
+      <div class="flex gap-5">
+        <a href="https://ananta-poudel.com.np/"
+          class="p-3 px-5 font-medium bg-black transition-all duration-300 hover:bg-gray-800 z-10 text-white rounded-md flex items-center gap-3 cursor-pointer">
+          <span class="material-symbols-outlined"> globe </span>Ananta Poudel
+        </a>
 
-          <div
-            class="p-3 px-5 bg-white transition-all duration-300 hover:bg-[#ffffffca] font-semibold rounded-md flex items-end gap-3 cursor-pointer">
-            <img class="h-6" src="../../../../assets/professional/github.svg" />
-          </div>
+        <a href="https://linkedin.com/in/ananta580"
+          class="p-3 px-5 bg-white transition-all duration-300 hover:bg-[#ffffffca] font-semibold rounded-md flex items-end gap-3 cursor-pointer">
+          <img class="h-6" src="../../../../assets/professional/linkedin.svg" />
+        </a>
 
-          <div
-            class="p-3 px-5 bg-white transition-all duration-300 hover:bg-[#ffffffca] font-semibold rounded-md flex items-end gap-3 cursor-pointer">
-            <img class="h-6" src="../../../../assets/professional/upwork.svg" />
-          </div>
+        <a href="https://github.com/ananta580"
+          class="p-3 px-5 bg-white transition-all duration-300 hover:bg-[#ffffffca] font-semibold rounded-md flex items-end gap-3 cursor-pointer">
+          <img class="h-6" src="../../../../assets/professional/github.svg" />
+        </a>
+
+        <a href="https://www.upwork.com/freelancers/anantap"
+          class="p-3 px-5 bg-white transition-all duration-300 hover:bg-[#ffffffca] font-semibold rounded-md flex items-end gap-3 cursor-pointer">
+          <img class="h-6" src="../../../../assets/professional/upwork.svg" />
+        </a>
 
 
-        </div>
       </div>
-
-      <!-- Card Section -->
-      <div class="flex w-full text-white my-32 gap-10">
-        <app-hero-card class="w-1/3" [bgColor]="'bg-blue-100'" [color]="'text-blue-500'" [button]="'bg-[#5a61e3]'"
-          [icon]="'feed'" [tags]="['COMPANY', 'LANGUAGES', 'FEATURES']" [description]="
-            'We provide you different kinds of news related to Tech Companies. Programming Languages and features added on them.'
-          "></app-hero-card>
-        <app-hero-card class="w-1/3" [bgColor]="'bg-green-100'" [color]="'text-green-500'" [button]="'bg-green-500'"
-          [icon]="'dictionary'" [tags]="['FRONTEND', 'BACKEND', 'DATABASE']" [description]="
-            'Argon is a great free UI package based on Angular that includes the most important components and features.'
-          "></app-hero-card>
-        <app-hero-card class="w-1/3" [bgColor]="'bg-orange-100'" [color]="'text-orange-500'" [button]="'bg-orange-500'"
-          [icon]="'bloodtype'" [tags]="['ADD NEWS', 'FUNDING', 'BLOG']" [description]="
-            'Argon is a great free UI package based on Angular that includes the most important components and features.'
-          "></app-hero-card>
-      </div>
-
-      <!-- Awesome features section -->
-      <div class="flex w-full my-40 gap-16 justify-between">
-        <!-- Texts -->
-        <div class="flex flex-col gap-10 w-[40%] pr-5">
-          <!-- Icon -->
-          <div class="w-14 h-14 rounded-full bg-green-200 shadow-2xl flex items-center justify-center">
-            <span class="material-symbols-outlined fill text-green-500">
-              settings
-            </span>
-          </div>
-
-          <!-- Title & description -->
-          <div class="flex flex-col gap-6">
-            <h1 class="text-3xl">Awesome features</h1>
-            <p class="text-gray-400 font-light text-justify leading-7">
-              Different kinds of news according to programming languages and
-              frameworks. Contains different courses for different technlogy
-              stacks like .Net, MERN, MEAN etc. People can also add things they
-              realize this website is missing.
-            </p>
-          </div>
-
-          <!-- Points -->
-          <div class="flex flex-col gap-3">
-            <!-- Point 1 -->
-            <div class="flex gap-5 items-center">
-              <div class="w-8 h-8 rounded-full bg-green-100 shadow-2xl flex items-center justify-center">
-                <span class="material-symbols-outlined text-sm fill text-green-500">
-                  settings
-                </span>
-              </div>
-              <span class="text-gray-500">All Types of tech related news.</span>
-            </div>
-
-            <!-- Point 2 -->
-            <div class="flex gap-5 items-center">
-              <div class="w-8 h-8 rounded-full bg-green-100 shadow-2xl flex items-center justify-center">
-                <span class="material-symbols-outlined text-sm fill text-green-500">
-                  html
-                </span>
-              </div>
-              <span class="text-gray-500">Different Programming stacks.</span>
-            </div>
-
-            <!-- Point 3 -->
-            <div class="flex gap-5 items-center">
-              <div class="w-8 h-8 rounded-full bg-green-100 shadow-2xl flex items-center justify-center">
-                <span class="material-symbols-outlined text-sm fill text-green-500">
-                  mood
-                </span>
-              </div>
-              <span class="text-gray-500">Build for tech lover Society.</span>
-            </div>
-          </div>
-        </div>
-        <img class="w-[45%] animate-pulse" src="../../../../assets/tn.png" />
-      </div>
-
-      <!-- Our users section -->
-      <div class="bg-gray-100 py-20 px-[21.43%] -mx-[21.43%] flex gap-10 justify-between">
-        <!-- Picture part -->
-        <img class="w-[45%] animate-pulse" src="../../../../assets/tn.png" />
-        <!-- Text part -->
-        <div class="flex flex-col gap-10 w-[50%]">
-          <!-- Icon -->
-          <div class="w-14 h-14 rounded-full bg-orange-200 shadow-2xl flex items-center justify-center">
-            <span class="material-symbols-outlined fill text-orange-500">
-              manufacturing
-            </span>
-          </div>
-
-          <!-- Title & description -->
-          <div class="flex flex-col gap-6">
-            <h1 class="text-3xl">Our Users</h1>
-            <p class="text-gray-500 font-light text-lg text-justify leading-7">
-              Tech nepal society can learn different type of programming stack
-              and gain knowledge on what you are begineer.
-            </p>
-            <p class="text-gray-400 font-light text-justify leading-7">
-              Our people can add news and Learning materials which will be
-              published here once after approval. Your contribution can pays off
-              our website free features.
-            </p>
-
-            <p class="text-gray-400 font-light text-justify leading-7">
-              In future, our target is to grow a big society where developers
-              can learn all they need from the base level usng our website.
-            </p>
-
-            <a class="font-semibold text-orange-500 cursor-pointer">Fund us using digital wallets.</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Contribute Knowledge section -->
-      <div class="contribute-gradient flex h-[500px] flex-col py-20 px-[21.43%] -mx-[21.43%] text-white items-center">
-        <h1 class="text-4xl font-semibold">Contribute something</h1>
-        <p class="w-[80%] text-center pt-10 font-light text-xl">
-          We are regularly updating and adding new content but We want you to
-          add what you have learned and want to spread that knowledge.
-        </p>
-
-        <!-- Message box -->
-        <div class="w-[70%] text-black bg-gray-200 rounded-md shadow-xl p-10 my-20">
-          <h1 class="text-xl">Want to work with us?</h1>
-          <h1 class="text-gray-600">Your addition is very important to us.</h1>
-          <textarea [rows]="6" [value]="''" class="my-5 p-4 border-gray-300 rounded-xl w-full shadow-inner outline-none"
-            placeholder="Type message to us...">
-          </textarea>
-          <div
-            class="contribute-gradient p-2 px-4 mt-4 font-medium z-10 text-white rounded-md flex text-center justify-center gap-3 cursor-pointer">
-            {{ "Send message" | uppercase }}
-          </div>
-        </div>
-      </div>
-
-      <app-footer-bar class="w-full"></app-footer-bar>
     </div>
+
+    <!-- Card Section -->
+    <div class="flex w-full text-white my-28 gap-8">
+      <app-hero-card class="w-1/3" [bgColor]="'bg-blue-100'" [color]="'text-blue-500'" [button]="'bg-[#5a61e3]'"
+        [icon]="'feed'" [tags]="['DEVELOPERS', 'DESIGNERS', 'COMMUNITY']" [title]="'Explore Tech News'" [description]="
+    'Tech Nepal, developed by Ananta Poudel, is your trusted platform for up-to-date technology news. Explore a variety of programming languages and actively collaborate with the tech community.'
+  "></app-hero-card>
+      <app-hero-card class="w-1/3" [bgColor]="'bg-green-100'" [color]="'text-green-500'" [button]="'bg-green-500'"
+        [icon]="'dictionary'" [tags]="['TECH', 'PROGRAMMING', 'COLLABORATION']" [title]="'Learn & Share Skills'"
+        [description]="
+    'A platform for tech enthusiasts to stay updated on the latest developments in the tech world. Learn new skills and share your knowledge with others.'
+  "></app-hero-card>
+      <app-hero-card class="w-1/3" [bgColor]="'bg-orange-100'" [color]="'text-orange-500'"
+        [title]="'Join Our Community'" [button]="'bg-orange-500'" [icon]="'bloodtype'"
+        [tags]="['TECH', 'RESOURCES', 'COMMUNITY']" [description]="
+    'Join a thriving community of developers and designers at Tech Nepal. Stay connected with tech updates and access valuable resources.'
+  "></app-hero-card>
+    </div>
+
+
+    <!-- Awesome features section -->
+    <div class="flex w-full my-32 gap-16 justify-between">
+      <!-- Texts -->
+      <div class="flex flex-col gap-5 w-[40%] pr-5">
+        <!-- Icon -->
+        <div class="rounded-full items-center justify-center">
+          <span class="material-symbols-outlined text-5xl font-semibold text-green-500">
+            settings
+          </span>
+        </div>
+
+        <!-- Title & description -->
+        <div class="flex flex-col gap-6">
+          <h1 class="text-3xl">Awesome features</h1>
+          <p class="text-gray-400 font-light text-lg leading-7">
+            Different kinds of news according to programming languages and
+            frameworks. Contains different courses for different technlogy
+            stacks like .Net, MERN, MEAN etc. People can also add things they
+            realize this website is missing.
+          </p>
+        </div>
+
+        <!-- Points -->
+        <div class="flex flex-col gap-3 text-lg">
+          <!-- Point 1 -->
+          <div class="flex gap-5 items-center">
+            <div class="h-12 w-12 rounded-full bg-green-100 shadow-2xl flex items-center justify-center">
+              <span class="material-symbols-outlined text-2xl fill text-green-500">
+                settings
+              </span>
+            </div>
+            <span class="text-gray-400">All Types of tech related news.</span>
+          </div>
+
+          <!-- Point 2 -->
+          <div class="flex gap-5 items-center">
+            <div class="h-12 w-12 rounded-full bg-green-100 shadow-2xl flex items-center justify-center">
+              <span class="material-symbols-outlined text-2xl fill text-green-500">
+                html
+              </span>
+            </div>
+            <span class="text-gray-400">Different Programming stacks.</span>
+          </div>
+
+          <!-- Point 3 -->
+          <div class="flex gap-5 items-center">
+            <div class="h-12 w-12 rounded-full bg-green-100 shadow-2xl flex items-center justify-center">
+              <span class="material-symbols-outlined text-2xl fill text-green-500">
+                mood
+              </span>
+            </div>
+            <span class="text-gray-400">Build for tech lover Society.</span>
+          </div>
+        </div>
+      </div>
+      <img class="w-[45%] opacity-80" src="../../../../assets/images/awesome-feature.svg" />
+    </div>
+
+    <!-- Our users section -->
+    <div class="bg-gray-100 py-20 px-[21.43%] -mx-[21.43%] flex gap-10 justify-between">
+      <!-- Picture part -->
+      <img class="w-[45%] opacity-80" src="../../../../assets/images/learn.svg" />
+      <!-- Text part -->
+      <div class="flex flex-col gap-10 w-[50%]">
+        <!-- Icon -->
+        <div class="rounded-full items-center justify-center">
+          <span class="material-symbols-outlined text-5xl font-semibold text-orange-500">
+            manufacturing
+          </span>
+        </div>
+
+        <!-- Title & description -->
+        <div class="flex flex-col gap-6">
+          <h1 class="text-3xl">Our Users</h1>
+          <p class="text-gray-400 font-light text-xl leading-7">
+            Tech nepal society can learn different type of programming stack
+            and gain knowledge on what you are begineer.
+          </p>
+          <p class="text-zinc-400 font-light text-justify leading-7">
+            Our people can add news and Learning materials which will be
+            published here once after approval. Your contribution can pays off
+            our website free features.
+          </p>
+
+          <p class="text-zinc-400 font-light text-justify leading-7">
+            In future, our target is to grow a big society where developers
+            can learn all they need from the base level usng our website.
+          </p>
+
+          <a class="font-semibold text-orange-500 cursor-pointer">Fund us using digital wallets.</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contribute Knowledge section -->
+    <div class="contribute-gradient flex h-[500px] flex-col py-20 px-[21.43%] -mx-[21.43%] text-white items-center">
+      <h1 class="text-4xl font-semibold">Contribute something</h1>
+      <p class="w-[80%] text-center pt-10 font-light text-xl">
+        We continuously update and expand our content, but we also encourage you to share your own knowledge and help
+        spread it further.
+      </p>
+
+      <!-- Message box -->
+      <div class="w-[70%] text-black bg-gray-200 rounded-md shadow-xl p-10 my-20">
+        <h1 class="text-xl">Want to work with us?</h1>
+        <h1 class="text-gray-600">Your contributions are valuable to us and play a crucial role in our community.</h1>
+        <textarea [rows]="6" [value]="''" class="my-5 p-4 border-gray-300 rounded-xl w-full shadow-inner outline-none"
+          placeholder="Type message to us...">
+          </textarea>
+        <div
+          class="contribute-gradient p-2 px-4 mt-4 font-medium z-10 text-white rounded-md flex text-center justify-center gap-3 cursor-pointer">
+          {{ "Send message" | uppercase }}
+        </div>
+      </div>
+    </div>
+
+    <app-footer-bar class="w-full"></app-footer-bar>
   </div>
 </div>
