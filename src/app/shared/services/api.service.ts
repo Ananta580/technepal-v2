@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-// const BASE_URL = 'https://technepal.azurewebsites.net/api';
-const BASE_URL = 'https://localhost:7030/api';
+const BASE_URL = 'https://technepal.azurewebsites.net/api';
+// const BASE_URL = 'https://localhost:7030/api';
 
 @Injectable({
   providedIn: 'root',
