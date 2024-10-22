@@ -1,6 +1,11 @@
 import { CategoryBE } from './category';
 import { HotTopicBE } from './hot-topic';
 
+export interface BlogViewBE {
+  blog: BlogBE;
+  relatedBlogs: BlogCardBE[];
+}
+
 export interface BlogBE {
   id?: string;
   title: string;
