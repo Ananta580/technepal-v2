@@ -6,7 +6,7 @@
     <!-- Navigate Trending Section -->
     <div class="bg-gray-200 flex w-full">
       <div
-        class="flex items-center justify-center font-medium text-white w-36 bg-gradient-to-r from-pink-800 to-pink-900">
+        class="flex items-center justify-center font-medium text-white w-36 bg-gradient-to-r to-pink-800 via-pink-700 from-pink-800">
         HOT TOPICS
       </div>
       <!-- Scroll bar with style -->
@@ -20,9 +20,9 @@
     <!-- Display Section -->
     <div class="flex flex-col mt-5 gap-6">
       <!-- HOT Topic & Latest News  -->
-      <div class="flex gap-6">
-        <app-hot-topic class="w-4/6"></app-hot-topic>
-        <app-latest-news class="w-2/6"></app-latest-news>
+      <div class="flex gap-6 max-md:flex-col">
+        <app-hot-topic class="w-4/6 max-lg:w-6/12 max-md:w-full"></app-hot-topic>
+        <app-latest-news class="w-2/6 max-lg:w-6/12 max-md:w-full"></app-latest-news>
       </div>
 
       <!-- Category Section -->

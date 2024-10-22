@@ -1,39 +1,26 @@
 <div>
   <!-- Main Title -->
   <div
-    class="flex justify-center items-center w-full shadow-md bg-gradient-to-b from-transparent to-blue-100 py-3 font-bold text-slate-800 rounded-lg"
-  >
+    class="flex justify-center items-center w-full shadow-md bg-gradient-to-r to-blue-950 via-blue-900 from-blue-950 py-3 font-bold text-white rounded-lg">
     HOT NEWS
   </div>
   <!-- Display Section -->
   <div class="flex flex-col">
-    <app-card
-      *ngIf="hotNews[0]"
-      class="w-full"
-      [routerLink]="'/news/' + hotNews[0].combinedTitle"
-      [item]="hotNews[0]"
-    ></app-card>
+    <app-card *ngIf="hotNews[0]" class="w-full" [routerLink]="'/news/' + hotNews[0].combinedTitle"
+      [item]="hotNews[0]"></app-card>
     <!-- Combined Card -->
-    <div class="flex gap-6">
-      <app-card
-        *ngFor="let news of hotNews | slice : 1 : 3; let i = index"
-        class="w-3/6"
-        [routerLink]="'/news/' + news.combinedTitle"
-        [item]="news"
-      >
+    <div class="flex gap-6 max-lg:flex-col">
+      <app-card *ngFor="let news of hotNews | slice : 1 : 3; let i = index" class="w-3/6 max-lg:w-full"
+        [routerLink]="'/news/' + news.combinedTitle" [item]="news">
       </app-card>
     </div>
 
     <!-- Combined Card -->
     <div class="flex gap-6">
       <!-- Card -->
-      <app-card
-        *ngFor="let news of hotNews | slice : 3 : 5; let i = index"
-        class="w-3/6"
-        [routerLink]="'/news/' + news.combinedTitle"
-        [item]="news"
-      >
-      </app-card>
+      <app-card *ngFor="let news of hotNews | slice : 3 : 5; let i = index"
+        [ngClass]="{'w-3/6': true, 'max-lg:w-full': true, 'max-lg:hidden': i === 1}"
+        [routerLink]="'/news/' + news.combinedTitle" [item]="news"></app-card>
     </div>
   </div>
 </div>

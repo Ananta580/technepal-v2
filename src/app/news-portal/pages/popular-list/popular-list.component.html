@@ -2,32 +2,12 @@
   <!-- Ads Section -->
   <app-my-ads></app-my-ads>
   <!-- Display Section -->
-  <div
-    *ngIf="blogs && blogs.length > 0; else emptyTemplate"
-    class="flex flex-col"
-  >
-    <!-- Combined Card -->
-    <div class="flex gap-6">
-      <!-- Card -->
-      <app-card
-        *ngFor="let news of blogs | slice : 0 : 3; let i = index"
-        class="w-2/6"
-        [routerLink]="'/news/' + news.combinedTitle"
-        [item]="news"
-      >
-      </app-card>
-    </div>
-    <!-- Combined Card -->
-    <div class="flex gap-6">
-      <!-- Card -->
-      <app-card
-        *ngFor="let news of blogs | slice : 3 : 6; let i = index"
-        class="w-2/6"
-        [routerLink]="'/news/' + news.combinedTitle"
-        [item]="news"
-      >
-      </app-card>
-    </div>
+  <div *ngIf="blogs && blogs.length > 0; else emptyTemplate"
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Card -->
+    <app-card *ngFor="let news of blogs; let i = index" class="w-full" [routerLink]="'/news/' + news.combinedTitle"
+      [item]="news">
+    </app-card>
   </div>
   <ng-template #emptyTemplate>
     <div class="h-80"></div>
